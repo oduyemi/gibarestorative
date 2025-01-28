@@ -5,9 +5,7 @@ import { Banner } from "@/components/Home/Banner";
 import { Features } from "@/components/Home/Features";
 import { Intro } from "@/components/Home/Intro";
 import { Board } from "@/components/Home/Board";
-import { Reviews } from "@/components/Home/Reviews";
 import { ServicesSection } from "@/components/Home/ServicesSection";
-import { Stories } from "@/components/Home/Stories";
 import { AdBlock } from "@/components/Home/AdBlock";
 
 export default function Home() {

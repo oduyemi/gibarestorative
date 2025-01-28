@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Box, Button } from "@chakra-ui/react";
 import Link from "next/link";
-import { FaBars, FaLeaf } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import Image from "next/image";
 
 export const Header: React.FC = () => {
