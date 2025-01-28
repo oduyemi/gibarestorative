@@ -14,10 +14,10 @@ export const Board: React.FC = () => {
                 Healthcare Services
               </Heading>
               <Text fontSize="md" color="gray.600">
-			  	Our team with the convenience of modern technology 
-				will give you full attention. We will conduct a 1:1 
-				consultation and explain all your options tailors 
-				to meet your specific needs. 
+                Our team with the convenience of modern technology 
+              will give you full attention. We will conduct a 1:1 
+              consultation and explain all your options tailors 
+              to meet your specific needs. 
               </Text>
               <Link href="#" className="btn-custom">
                 <Button variant="outline" color="#BDA023" borderColor="#BDA023" mt={4}>See Services</Button>
@@ -27,7 +27,7 @@ export const Board: React.FC = () => {
 
           {/* Center Column - Consultation Form */}
           <Box className="col-md-6 d-flex align-items-stretch">
-            <Box className="consultation consul w-100 px-4 px-md-5" bg="white" boxShadow="md" borderRadius="lg" p={8}>
+            <Box className="consultation consul w-100 px-4 px-md-5" bg="#345995" boxShadow="md" borderRadius="lg" p={8}>
               <Box className="text-center">
                 <Heading as="h3" size="lg" className="mt-5 mb-4">
                   Free Consultation

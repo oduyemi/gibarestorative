@@ -58,10 +58,10 @@ export const Intro: React.FC = () => {
               />
               <Box ml={4}>
                 <Heading size="sm" color="gray.700">
-                  Cynthia Hunter
+                  Chinyerem Ariole
                 </Heading>
                 <Text fontSize="sm" color="gray.500">
-                  Personal Dietitian
+                  FNP-C
                 </Text>
               </Box>
             </Flex>

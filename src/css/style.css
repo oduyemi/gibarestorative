@@ -8929,7 +8929,7 @@
       bottom: 0;
       content: '';
       opacity: .8;
-      background: #1089ff; }
+      background: #345995; }
   
   .block-7 {
     border-radius: 4px;
@@ -8991,8 +8991,9 @@
     color: rgba(255, 255, 255, 0.9);
     padding-top: 4em;
     padding-bottom: 4em; }
-    .consultation.consul {
-      background: #313B72; }
+    /* .consultation.consul {
+      background: #313B72; 
+    } */
     .consultation h3 {
       font-size: 20px;
       color: #fff;
