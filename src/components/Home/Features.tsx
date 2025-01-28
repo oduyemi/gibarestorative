@@ -44,7 +44,9 @@ export const Features: React.FC = () => {
                   src={service.image}
                   alt={service.title}
                   layout="fill"
-                  // objectFit="cover"
+                  className="img-responsive"
+                  objectFit="cover"
+                  objectPosition="center"
                 />
               </Box>
               <Box p={6} textAlign="center">
