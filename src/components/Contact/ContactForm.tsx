@@ -151,7 +151,7 @@ export const ContactForm = () => {
                                                     <span className="fa fa-map-marker"></span>
                                                 </Box>
                                                 <Box className="text">
-                                                    <Text><strong>Address:</strong> 24301 Brazos Town Crossing, Rosenberg, Texas 77471, United States'&apos;'</Text>
+                                                    <Text><strong>Address:</strong> 24301 Brazos Town Crossing, Rosenberg, Texas 77471, United States&#39;</Text>
                                                 </Box>
                                             </Box>
                                             <Box className="dbox w-100 d-flex align-items-center mb-4">
