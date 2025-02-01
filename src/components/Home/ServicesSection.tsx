@@ -1,5 +1,6 @@
 "use client";
 import { Box, Text, Heading, SimpleGrid, Flex, Icon, Button } from "@chakra-ui/react";
+import Link from "next/link";
 import { FaWeight, FaUserMd, FaLaptopMedical, FaHeartbeat } from "react-icons/fa";
 
 export const ServicesSection: React.FC = () => {
@@ -7,22 +8,26 @@ export const ServicesSection: React.FC = () => {
     { 
       icon: FaWeight, 
       title: "Weight Loss Program", 
-      description: "Schedule your free consultation with one of our providers now to learn more and ask questions." 
+      description: "Schedule your free consultation with one of our providers now to learn more and ask questions.",
+      link: "/weight-loss"
     },
     { 
       icon: FaUserMd, 
       title: "Hormone Replacement Therapy", 
-      description: "Are you ready to improve your fertility and eliminate acne, fatigue, hair loss, weight gain, unwanted hair growth and mood swings?" 
+      description: "Are you ready to improve your fertility and eliminate acne, fatigue, hair loss, weight gain, unwanted hair growth and mood swings?", 
+      link:"/hormone-replacement"
     },
     { 
       icon: FaLaptopMedical, 
       title: "Virtual Visits", 
-      description: "Get started right away at your own pace with a course that suits you, including a community of like-minded women." 
+      description: "Get started right away at your own pace with a course that suits you, including a community of like-minded women.",
+      link:"/virtual-visits" 
     },
     { 
       icon: FaHeartbeat, 
       title: "Direct Patient Care", 
-      description: "We will personalize your care. This includes weekly dosing of medication, diet, and exercise plan." 
+      description: "We will personalize your care. This includes weekly dosing of medication, diet, and exercise plan.",
+      link:"/patient-care" 
     },
   ];
 
@@ -75,20 +80,22 @@ export const ServicesSection: React.FC = () => {
               <Text textAlign="center" color="gray.600" px={4} mb={4}>
                 {pkg.description}
               </Text>
-              <Button
-                colorScheme="blue"
-                variant="solid"
-                size="lg"
-                px={6}
-                py={4}
-                fontWeight="semibold"
-                borderRadius="full"
-                transition="all 0.3s ease"
-                bgColor="#BDA023" 
-                _hover={{ bgGradient: "linear(to-r, blue.600, blue.700)" }}
-              >
-                Learn More
-              </Button>
+              <Link href={pkg.link}>
+                <Button
+                  colorScheme="blue"
+                  variant="solid"
+                  size="lg"
+                  px={6}
+                  py={4}
+                  fontWeight="semibold"
+                  borderRadius="full"
+                  transition="all 0.3s ease"
+                  bgColor="#BDA023" 
+                  _hover={{ bgGradient: "linear(to-r, blue.600, blue.700)" }}
+                >
+                  Learn More
+                </Button>
+              </Link>
             </Flex>
           ))}
         </SimpleGrid>

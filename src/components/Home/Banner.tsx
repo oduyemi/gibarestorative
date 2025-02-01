@@ -15,18 +15,21 @@ export const Banner: React.FC = () => {
       background: "url(assets/images/hero0.jpg)",
       title: "Welcome to Giba Medical Clinic",
       subtitle: "We help you achieve your weight loss goal and improve your quality of life with a holistic approach.",
+      link:"/about"
     },
     {
       id: 2,
       background: "url(assets/images/hero1.jpg)",
-      title: "A Fresh Approach to Healthy Living",
-      subtitle: "Unlock your potential with good nutrition and balanced wellness.",
+      title: "Rework Your Hormones",
+      subtitle: "Specially for women who are ready to restore their hormones naturally.",
+      link: "/hormone-replacement"
     },
     {
       id: 3,
       background: "url(assets/images/hero2.jpg)",
-      title: "Welcome to Giba Mediacl Clinic",
-      subtitle: "Transform your health through mindful habit changes.",
+      title: "Free Consultation",
+      subtitle: "Let's get to know each other during a 15-minute video call. You can ask questions and we will explain how I can assist you.",
+      link: "/bookings"
     },
   ];
 
@@ -57,12 +60,12 @@ export const Banner: React.FC = () => {
                 <VStack
                   spacing={{ base: 4, md: 6 }}
                   textAlign="center"
-                  maxW={{ base: "70%", md: "600px" }} // Reduced width further on mobile to 70%
+                  maxW={{ base: "70%", md: "600px" }}
                   color="white"
                 >
                   <Heading
                     as="h2"
-                    size={{ base: "md", md: "2xl" }} // Reduced heading size on mobile
+                    size={{ base: "md", md: "2xl" }} 
                     fontWeight="bold"
                     textTransform="uppercase"
                     letterSpacing="wide"
@@ -74,7 +77,7 @@ export const Banner: React.FC = () => {
                   </Text>
 
                   <HStack spacing={{ base: 2, md: 4 }} mt={4} justify="center">
-                    <Link href="" passHref>
+                    <Link href={slide.link} passHref>
                       <Button
                         variant="outline"
                         color="#BDA023"
@@ -84,13 +87,13 @@ export const Banner: React.FC = () => {
                         fontWeight="semibold"
                         borderRadius="full"
                         transition="all 0.3s ease"
-                        fontSize={{ base: "sm", md: "lg" }} // Adjusted button font size for mobile
+                        fontSize={{ base: "sm", md: "lg" }} 
                         _hover={{ bg: "gray.600" }}
                       >
                         Learn More
                       </Button>
                     </Link>
-                    <Link href="" passHref>
+                    <Link href="/contact" passHref>
                       <Button
                         bg="#BDA023"
                         color="white"

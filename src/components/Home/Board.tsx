@@ -19,7 +19,7 @@ export const Board: React.FC = () => {
               consultation and explain all your options tailors 
               to meet your specific needs. 
               </Text>
-              <Link href="#" className="btn-custom">
+              <Link href="/services" className="btn-custom">
                 <Button 
                   variant="outline" 
                   color="#BDA023" 
@@ -127,7 +127,7 @@ export const Board: React.FC = () => {
                 and virtual care membership, your quality 
                 care is just one click away.
               </Text>
-              <Link href="#" className="btn-custom">
+              <Link href="/about" className="btn-custom">
                 <Button 
                   variant="outline" 
                   borderColor="#BDA023" 
