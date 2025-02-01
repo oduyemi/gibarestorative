@@ -8,7 +8,7 @@ export const ContactForm = () => {
     const [errors, setErrors] = useState({ name: '', email: '', subject: '', message: '' });
 
     const validateForm = () => {
-        const formErrors = { name: '', email: '', subject: '', message: '' };  // Changed let to const
+        const formErrors = { name: '', email: '', subject: '', message: '' }; 
         let isValid = true;
 
         if (!formData.name) {
