@@ -7,6 +7,7 @@ import { Intro } from "@/components/Home/Intro";
 import { Board } from "@/components/Home/Board";
 import { ServicesSection } from "@/components/Home/ServicesSection";
 import { AdBlock } from "@/components/Home/AdBlock";
+import { MailingListPrompt } from "@/components/MailinListPrompt";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
           {/* <Reviews /> */}
           <ServicesSection />
           {/* <Stories /> */}
-          <AdBlock />
+          <MailingListPrompt />
         </Box> 
         </main>
     </div>

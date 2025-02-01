@@ -10,9 +10,10 @@ export const Intro: React.FC = () => {
           align="center"
           justify="space-between"
           gap={{ base: 6, md: 12 }}
+          flexWrap="wrap"
         >
-          {/* Right Content (Now First on Mobile) */}
-          <Box flex="1" textAlign={{ base: "center", md: "left" }} maxW="90%">
+          {/* Right Content (First on Mobile) */}
+          <Box flex="1" textAlign={{ base: "center", md: "left" }} maxW={{ base: "100%", md: "80%" }}>
             <Box mb={6}>
               <Text fontSize="sm" color="#345995" fontWeight="bold" mb={2}>
                 Welcome to Giba Medical Clinic
@@ -34,7 +35,7 @@ export const Intro: React.FC = () => {
               <Image
                 src="/assets/images/ceo.jpg"
                 alt="Cynthia Hunter"
-                boxSize="60px"
+                boxSize={{ base: "50px", md: "60px" }}
                 borderRadius="full"
                 objectFit="cover"
               />
@@ -49,12 +50,13 @@ export const Intro: React.FC = () => {
             </Flex>
           </Box>
 
-          {/* Left Image (Now Below on Mobile) */}
+          {/* Left Image (Below on Mobile) */}
           <Box
             flex="1"
             position="relative"
             w="100%"
-            h="auto"
+            maxW={{ base: "100%", md: "450px" }}
+            aspectRatio="16/9"
             borderRadius="lg"
             overflow="hidden"
             boxShadow="lg"

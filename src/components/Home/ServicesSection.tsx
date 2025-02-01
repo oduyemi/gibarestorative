@@ -1,13 +1,29 @@
 "use client";
-import { Box, Text, Heading, SimpleGrid, Flex, Icon } from "@chakra-ui/react";
-import { FaDumbbell, FaAppleAlt, FaHeartbeat, FaFirstAid } from "react-icons/fa";
+import { Box, Text, Heading, SimpleGrid, Flex, Icon, Button } from "@chakra-ui/react";
+import { FaWeight, FaUserMd, FaLaptopMedical, FaHeartbeat } from "react-icons/fa";
 
 export const ServicesSection: React.FC = () => {
   const services = [
-    { icon: FaAppleAlt, title: "Package 1" },
-    { icon: FaDumbbell, title: "Package 2" },
-    { icon: FaHeartbeat, title: "Package 3" },
-    { icon: FaFirstAid, title: "Package 4" },
+    { 
+      icon: FaWeight, 
+      title: "Weight Loss Program", 
+      description: "Schedule your free consultation with one of our providers now to learn more and ask questions." 
+    },
+    { 
+      icon: FaUserMd, 
+      title: "Hormone Replacement Therapy", 
+      description: "Are you ready to improve your fertility and eliminate acne, fatigue, hair loss, weight gain, unwanted hair growth and mood swings?" 
+    },
+    { 
+      icon: FaLaptopMedical, 
+      title: "Virtual Visits", 
+      description: "Get started right away at your own pace with a course that suits you, including a community of like-minded women." 
+    },
+    { 
+      icon: FaHeartbeat, 
+      title: "Direct Patient Care", 
+      description: "We will personalize your care. This includes weekly dosing of medication, diet, and exercise plan." 
+    },
   ];
 
   return (
@@ -32,10 +48,10 @@ export const ServicesSection: React.FC = () => {
               align="center"
               p={8}
               bg="white"
-              boxShadow="lg"
+              boxShadow="xl"
               borderRadius="2xl"
               transition="all 0.3s ease-in-out"
-              minH="280px"
+              minH="340px"
               _hover={{ transform: "translateY(-8px)", boxShadow: "2xl" }}
             >
               <Flex
@@ -43,23 +59,36 @@ export const ServicesSection: React.FC = () => {
                 align="center"
                 w={20}
                 h={20}
-                bg="blue.500"
+                bgGradient="linear(to-r, blue.500, blue.600)"
                 color="white"
                 borderRadius="full"
                 boxShadow="lg"
                 transition="0.3s"
-                _hover={{ bg: "blue.600", transform: "rotate(10deg)" }}
+                _hover={{ transform: "rotate(10deg) scale(1.1)" }}
                 mb={5}
               >
                 <Icon as={pkg.icon} boxSize={10} />
               </Flex>
-              <Heading size="md" mb={3} fontWeight="semibold">
+              <Heading size="md" mb={3} fontWeight="semibold" color="gray.800">
                 {pkg.title}
               </Heading>
-              <Text textAlign="center" color="gray.600" px={4}>
-                Discover premium services tailored to meet your needs with
-                reliability and affordability.
+              <Text textAlign="center" color="gray.600" px={4} mb={4}>
+                {pkg.description}
               </Text>
+              <Button
+                colorScheme="blue"
+                variant="solid"
+                size="lg"
+                px={6}
+                py={4}
+                fontWeight="semibold"
+                borderRadius="full"
+                transition="all 0.3s ease"
+                bgColor="#BDA023" 
+                _hover={{ bgGradient: "linear(to-r, blue.600, blue.700)" }}
+              >
+                Learn More
+              </Button>
             </Flex>
           ))}
         </SimpleGrid>

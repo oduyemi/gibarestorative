@@ -20,7 +20,16 @@ export const Board: React.FC = () => {
               to meet your specific needs. 
               </Text>
               <Link href="#" className="btn-custom">
-                <Button variant="outline" color="#BDA023" borderColor="#BDA023" mt={4}>See Services</Button>
+                <Button 
+                  variant="outline" 
+                  color="#BDA023" 
+                  borderColor="#BDA023" 
+                  mt={4}
+                  size="lg"
+                  fontWeight="semibold"
+                  borderRadius="full"
+                  transition="all 0.3s ease"
+                >See Services</Button>
               </Link>
             </Box>
           </Box>
@@ -84,7 +93,16 @@ export const Board: React.FC = () => {
                   </Box>
                   <Box className="col-md-12 col-lg-6 col-xl-4">
                     <Box className="form-group">
-                      <Button className="btn py-2 px-4" bgColor="#BDA023" color="#fff" w="full">
+                      <Button 
+                        className="btn py-2 px-4"   
+                        bgColor="#BDA023"  
+                        color="#fff" 
+                        w="full"
+                        size="lg"
+                        fontWeight="semibold"
+                        borderRadius="full"
+                        transition="all 0.3s ease"
+                      >
                         Appointment
                       </Button>
                     </Box>
@@ -110,7 +128,18 @@ export const Board: React.FC = () => {
                 care is just one click away.
               </Text>
               <Link href="#" className="btn-custom">
-                <Button variant="outline" borderColor="#BDA023" color="#BDA023" mt={4}>About Us</Button>
+                <Button 
+                  variant="outline" 
+                  borderColor="#BDA023" 
+                  color="#BDA023" 
+                  mt={4}
+                  size="lg"
+                  fontWeight="semibold"
+                  borderRadius="full"
+                  transition="all 0.3s ease"
+                >
+                  About Us
+                </Button>
               </Link>
             </Box>
           </Box>

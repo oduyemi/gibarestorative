@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css"
 import { TopHeader } from "@/navigation/TopHeader";
 import { Header } from "@/navigation/Header";
+import { Footer } from "@/navigation/Footer";
 
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -18,6 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Header />
             <Box flex="1" m={0} p={0}>
               {children}
+            </Box>
+            <Box className="mt-5">
+              <Footer />
             </Box>
           </Box>
         </ChakraProvider>

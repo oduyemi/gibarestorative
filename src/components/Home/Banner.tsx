@@ -13,7 +13,7 @@ export const Banner: React.FC = () => {
     {
       id: 1,
       background: "url(assets/images/hero0.jpg)",
-      title: "Welcome to Giba Clinic",
+      title: "Welcome to Giba Medical Clinic",
       subtitle: "We help you achieve your weight loss goal and improve your quality of life with a holistic approach.",
     },
     {
@@ -25,7 +25,7 @@ export const Banner: React.FC = () => {
     {
       id: 3,
       background: "url(assets/images/hero2.jpg)",
-      title: "Welcome to Giba Restoratives",
+      title: "Welcome to Giba Mediacl Clinic",
       subtitle: "Transform your health through mindful habit changes.",
     },
   ];
@@ -54,20 +54,55 @@ export const Banner: React.FC = () => {
 
               {/* Content */}
               <Box position="relative" zIndex={2} height="100%" display="flex" alignItems="center" justifyContent="center">
-                <VStack spacing={4} textAlign="center" maxW="600px" color="white">
-                  <Heading as="h2" size="2xl" fontWeight="bold" textTransform="uppercase" letterSpacing="wide">
+                <VStack
+                  spacing={{ base: 4, md: 6 }}
+                  textAlign="center"
+                  maxW={{ base: "70%", md: "600px" }} // Reduced width further on mobile to 70%
+                  color="white"
+                >
+                  <Heading
+                    as="h2"
+                    size={{ base: "md", md: "2xl" }} // Reduced heading size on mobile
+                    fontWeight="bold"
+                    textTransform="uppercase"
+                    letterSpacing="wide"
+                  >
                     {slide.title}
                   </Heading>
-                  <Text fontSize="xl" fontWeight="medium">{slide.subtitle}</Text>
+                  <Text fontSize={{ base: "sm", md: "xl" }} fontWeight="medium">
+                    {slide.subtitle}
+                  </Text>
 
-                  <HStack spacing={4} mt={4}>
+                  <HStack spacing={{ base: 2, md: 4 }} mt={4} justify="center">
                     <Link href="" passHref>
-                      <Button variant="outline" color="#BDA023" px={6} py={3} fontSize="lg" _hover={{ bg: "gray.600" }}>
+                      <Button
+                        variant="outline"
+                        color="#BDA023"
+                        px={{ base: 4, md: 6 }}
+                        py={3}
+                        size="lg"
+                        fontWeight="semibold"
+                        borderRadius="full"
+                        transition="all 0.3s ease"
+                        fontSize={{ base: "sm", md: "lg" }} // Adjusted button font size for mobile
+                        _hover={{ bg: "gray.600" }}
+                      >
                         Learn More
                       </Button>
                     </Link>
                     <Link href="" passHref>
-                      <Button bg="#BDA023" color="black" px={6} py={3} fontSize="lg" _hover={{ bg: "gray.200" }}>
+                      <Button
+                        bg="#BDA023"
+                        color="white"
+                        px={{ base: 4, md: 6 }}
+                        py={3}
+                        size="lg"
+                        fontWeight="semibold"
+                        borderRadius="full"
+                        transition="all 0.3s ease"
+                        fontSize={{ base: "sm", md: "lg" }} 
+                        _hover={{ bg: "gray.200", color: "black" }}
+                      >
                         Contact Us
                       </Button>
                     </Link>
