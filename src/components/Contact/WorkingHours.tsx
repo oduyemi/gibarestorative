@@ -1,5 +1,5 @@
 "use client";
-import { Box, Text, Stack, Flex, VStack, HStack, useBreakpointValue, Divider } from "@chakra-ui/react";
+import { Box, Text, Stack, Flex, VStack, Divider } from "@chakra-ui/react";
 
 export const WorkingHours = () => {
   const workingHours = [

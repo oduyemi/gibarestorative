@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Box, Heading, Text, Input, Button, Textarea, Stack, FormControl, FormLabel, FormErrorMessage, useBreakpointValue, Center } from "@chakra-ui/react";
+import { Box, Heading, Text, Input, Button, Textarea, Stack, FormControl, FormLabel, FormErrorMessage, Center } from "@chakra-ui/react";
 
 export const ContactForm = () => {
     const [isLoading, setIsLoading] = useState(false);
