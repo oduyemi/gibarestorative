@@ -8,7 +8,7 @@ export const ContactForm = () => {
     const [errors, setErrors] = useState({ name: '', email: '', subject: '', message: '' });
 
     const validateForm = () => {
-        let formErrors = { name: '', email: '', subject: '', message: '' };
+        const formErrors = { name: '', email: '', subject: '', message: '' };  // Changed let to const
         let isValid = true;
 
         if (!formData.name) {
@@ -126,15 +126,15 @@ export const ContactForm = () => {
                                                         <Button
                                                             type="submit"
                                                             bgColor="#BDA023"
-															color="white"
+                                                            color="white"
                                                             size="lg"
                                                             width="full"
-															fontWeight="semibold"
-															borderRadius="full"
-															transition="all 0.3s ease"
+                                                            fontWeight="semibold"
+                                                            borderRadius="full"
+                                                            transition="all 0.3s ease"
                                                             isLoading={isLoading}
                                                             loadingText="Sending..."
-															_hover={{ bg: "gray.300", color: "black" }}
+                                                            _hover={{ bg: "gray.300", color: "black" }}
                                                         >
                                                             Send Message
                                                         </Button>

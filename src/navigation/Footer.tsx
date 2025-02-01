@@ -1,5 +1,5 @@
 "use client";
-import { Box, Flex, Heading, Text, Input, Button, Stack, Link, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Input, Button, Stack, Link } from "@chakra-ui/react";
 import Image from "next/image";
 
 export const Footer = () => {
