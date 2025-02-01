@@ -65,7 +65,6 @@ export const ContactForm = () => {
                                     <Box className="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
                                         <Box className="contact-wrap w-100 p-md-5 p-4" bg="white" boxShadow="lg" borderRadius="md">
                                             <Heading as="h3" mb={4} color="#345995">Get in touch</Heading>
-                                            {/* <Text id="form-message-success" mb={4} color="green.500">Your message was sent, thank you!</Text> */}
                                             <form onSubmit={handleSubmit}>
                                                 <Stack spacing={4}>
                                                     <Box display="flex" flexWrap="wrap" gap={4}>
