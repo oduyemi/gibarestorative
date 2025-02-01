@@ -169,7 +169,7 @@ export const ContactForm = () => {
                                                     <span className="fa fa-paper-plane"></span>
                                                 </Box>
                                                 <Box className="text">
-                                                    <Text><strong>Email:</strong> <Link href="mailto:info@gibarestorative.com">info&#39;gibarestorative.com</Link></Text>
+                                                    <Text><strong>Email:</strong> <Link href="mailto:info@gibarestorative.com">info@gibarestorative.com</Link></Text>
                                                 </Box>
                                             </Box>
                                         </Box>
