@@ -150,9 +150,9 @@ export const ContactForm = () => {
                                                 <Box className="icon d-flex align-items-center justify-content-center" mr={3}>
                                                     <span className="fa fa-map-marker"></span>
                                                 </Box>
-                                                {/* <Box className="text">
-                                                    <Text><strong>Address:</strong> 24301 Brazos Town Crossing, Rosenberg, Texas 77471, United States&#39;</Text>
-                                                </Box> */}
+                                                <Box className="text">
+                                                    <Text><strong>Address:</strong> 24301 Brazos Town Crossing, Rosenberg, Texas 77471, United States</Text>
+                                                </Box>
                                             </Box>
                                             <Box className="dbox w-100 d-flex align-items-center mb-4">
                                                 <Box className="icon d-flex align-items-center justify-content-center" mr={3}>
@@ -167,7 +167,7 @@ export const ContactForm = () => {
                                                     <span className="fa fa-paper-plane"></span>
                                                 </Box>
                                                 <Box className="text">
-                                                    <Text><strong>Email:</strong> <a href="mailto:info@gibarestorative.com">info@gibarestorative.com</a></Text>
+                                                    <Text><strong>Email:</strong> <a href="mailto:info@gibarestorative.com">info&#39;gibarestorative.com</a></Text>
                                                 </Box>
                                             </Box>
                                         </Box>
