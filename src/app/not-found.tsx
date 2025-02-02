@@ -44,7 +44,7 @@ export default function NotFound() {
           </Heading>
 
           <Text fontSize="lg" opacity={0.8}>
-            Uh-oh! We can't seem to find the page you're looking for. Let's take you home.
+            Uh-oh`&#33;` We can`&apos;`t seem to find the page you`&apos;`re looking for. Let`&apos;`s take you home.
           </Text>
 
           <MotionButton

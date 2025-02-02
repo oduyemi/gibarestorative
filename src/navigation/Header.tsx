@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Box, Button, Menu, MenuButton, MenuList, MenuItem, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Menu, MenuButton, MenuList, MenuItem, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import { FaBars, FaChevronDown } from "react-icons/fa";
 import Image from "next/image";
