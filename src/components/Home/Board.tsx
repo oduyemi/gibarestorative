@@ -127,7 +127,7 @@ export const Board: React.FC = () => {
                 and virtual care membership, your quality 
                 care is just one click away.
               </Text>
-              <Link href="/about" className="btn-custom">
+              <Link href="/locator" className="btn-custom">
                 <Button 
                   variant="outline" 
                   borderColor="#BDA023" 
@@ -138,7 +138,7 @@ export const Board: React.FC = () => {
                   borderRadius="full"
                   transition="all 0.3s ease"
                 >
-                  About Us
+                  Contact Us
                 </Button>
               </Link>
             </Box>

@@ -146,7 +146,7 @@ export const ContactForm = () => {
                                     </Box>
                                     <Box className="col-lg-4 col-md-5 d-flex align-items-stretch">
                                         <Box className="info-wrap w-100 p-md-5 p-4" bg="#345995" color="white" borderRadius="md">
-                                            <Heading as="h3" mb={4}>Let&apo;s get in touch</Heading>
+                                            <Heading as="h3" mb={4}>Get in Touch</Heading>
                                             <Text mb={4}>We are open for any suggestion or just to have a chat</Text>
                                             <Box className="dbox w-100 d-flex align-items-start mb-4">
                                                 <Box className="icon d-flex align-items-center justify-content-center" mr={3}>
