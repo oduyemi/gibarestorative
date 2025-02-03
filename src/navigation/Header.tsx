@@ -80,7 +80,7 @@ export const Header: React.FC = () => {
               {[
                 { label: "Hormone Replacement Therapy", link: "/hormone-replacement" },
                 { label: "Patient Care", link: "/patient-care" },
-                { label: "Virtual Visits", link: "/virtual-visits" },
+                { label: "Virtual Visits", link: "/virtual-care" },
                 { label: "Weight Loss Program", link: "/weight-loss" }
               ].map((service, idx) => (
                 <MenuItem 
@@ -95,7 +95,7 @@ export const Header: React.FC = () => {
             </MenuList>
           </Menu>
 
-          {["Urgent Care", "Membership", "Bookings", "Contact Us"].map((item, index) => (
+          {["Membership", "Bookings", "Contact Us"].map((item, index) => (
             <Box as="li" key={index}>
               <Link href={`/${item.toLowerCase().replace(/\s/g, "-")}`} passHref>
                 <Text 
@@ -151,14 +151,14 @@ export const Header: React.FC = () => {
                 {[
                   { label: "Hormone Replacement Therapy", link: "/hormone-replacement" },
                   { label: "Patient Care", link: "/patient-care" },
-                  { label: "Virtual Visits", link: "/virtual-visits" },
+                  { label: "Virtual Visits", link: "/virtual-care" },
                   { label: "Weight Loss Program", link: "/weight-loss" }
                 ].map((service, idx) => (
                   <MenuItem 
                     as={Link} 
                     key={idx} 
                     href={service.link} 
-                    _hover={{ bg: "gray.100" }}
+                    _hover={{ bg: "gray.100", color: "#008B8B" }}
                   >
                     {service.label}
                   </MenuItem>
@@ -166,7 +166,7 @@ export const Header: React.FC = () => {
               </MenuList>
             </Menu>
 
-            {["Urgent Care", "Membership", "Bookings", "Contact Us"].map((item, index) => (
+            {["Membership", "Bookings", "Contact Us"].map((item, index) => (
               <Link key={index} href={`/${item.toLowerCase().replace(/\s/g, "-")}`} passHref>
                 <Text 
                   fontSize="lg" 
