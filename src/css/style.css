@@ -9820,3 +9820,7 @@
       stroke-dasharray: 89, 200;
       stroke-dashoffset: -136px; } }
   
+
+      .top{
+        margin-top: "-20%" !important;
+      }

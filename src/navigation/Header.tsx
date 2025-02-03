@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import { Box, Button, Menu, MenuButton, MenuList, MenuItem, Text } from "@chakra-ui/react";
+import { 
+  Box, Button, Menu, MenuButton, MenuList, MenuItem, Text, Flex 
+} from "@chakra-ui/react";
 import Link from "next/link";
 import { FaBars, FaChevronDown } from "react-icons/fa";
 import Image from "next/image";
@@ -13,85 +15,173 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark text-dark shadow-lg" style={{ backgroundColor: "#f8f9fa", padding: "1rem 2rem" }}>
-      <Box className="container d-flex justify-content-between align-items-center" m={0} p={0}>
-        <Link className="navbar-brand d-flex align-items-center" href="/">
-          <Image
-            src="/assets/images/logo.png"
-            alt="Logo"
-            width={100}
-            height={100}
-            className="h-14 w-14 object-contain logo"
+    <Box as="nav" bg="white" shadow="md" py={4} px={6} position="sticky" top={0} zIndex={10}>
+      <Flex justify="space-between" align="center">
+        
+        {/* Logo */}
+        <Link href="/">
+          <Image 
+            src="/assets/images/logo.png" 
+            alt="Logo" 
+            width={120} 
+            height={50} 
+            className="object-contain"
           />
         </Link>
+
+        {/* Mobile Menu Button */}
         <Button 
-          className="navbar-toggler" 
+          display={{ base: "flex", lg: "none" }} 
           onClick={toggleMobileMenu} 
-          aria-label="Toggle Navigation Menu"
-          display={{ base: "block", lg: "none" }} // Show only on mobile
-          variant="ghost"
+          variant="ghost" 
           _hover={{ bg: "transparent" }}
+          fontSize="1.5rem"
         >
           <FaBars />
         </Button>
-        <Box className={`collapse navbar-collapse ${isMobileMenuOpen ? "show" : ""}`} display={{ base: "block", lg: "flex" }}>
-          <ul className="navbar-nav ml-auto text-center text-lg-left d-flex align-items-center gap-6">
-            <li className="nav-item">
-              <Link href="/" className="nav-link text-dark hover:text-blue-600 transition-all duration-300">
-                <Text fontSize="lg" fontWeight="semibold">Home</Text>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/about" className="nav-link text-dark hover:text-blue-600 transition-all duration-300">
-                <Text fontSize="lg" fontWeight="semibold">About</Text>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Menu>
-                <MenuButton 
-                  as={Button} 
-                  variant="ghost" 
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  rightIcon={<FaChevronDown />} 
-                  _hover={{ bg: "transparent", color: "blue.600" }}
-                  className="nav-link text-dark d-flex align-items-center hover:text-blue-600 transition-all duration-300"
-                  padding="0.75rem 1.25rem" // Ensure consistent padding
+
+        {/* Desktop Navigation */}
+        <Flex 
+          as="ul" 
+          listStyleType="none" 
+          align="center" 
+          gap={6} 
+          display={{ base: "none", lg: "flex" }}
+        >
+          {["Home", "About"].map((item, index) => (
+            <Box as="li" key={index}>
+              <Link href={`/${item.toLowerCase()}`} passHref>
+                <Text 
+                  fontSize="lg" 
+                  _hover={{ color: "#008B8B" }} 
+                  transition="color 0.3s"
+                  cursor="pointer"
                 >
-                  <Text fontSize="lg" fontWeight="semibold" mr={2}>Services</Text> {/* Added margin to space text and icon */}
-                </MenuButton>
-                <MenuList bg="white" boxShadow="lg" borderRadius="md" py={2}>
-                  <MenuItem as={Link} href="/hormone-replacement" _hover={{ bg: "gray.100" }}>Hormone Replacement Therapy</MenuItem>
-                  <MenuItem as={Link} href="/patient-care" _hover={{ bg: "gray.100" }}>Patient Care</MenuItem>
-                  <MenuItem as={Link} href="/virtual-visits" _hover={{ bg: "gray.100" }}>Virtual Visits</MenuItem>
-                  <MenuItem as={Link} href="/weight-loss" _hover={{ bg: "gray.100" }}>Weight Loss Program</MenuItem>
-                </MenuList>
-              </Menu>
-            </li>
-            <li className="nav-item">
-              <Link href="/urgent-care" className="nav-link text-dark hover:text-blue-600 transition-all duration-300">
-                <Text fontSize="lg" fontWeight="semibold">Urgent Care</Text>
+                  {item}
+                </Text>
               </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/membership" className="nav-link text-dark hover:text-blue-600 transition-all duration-300">
-                <Text fontSize="lg" fontWeight="semibold">Membership</Text>
+            </Box>
+          ))}
+
+          {/* Services Dropdown - Now after About */}
+          <Menu>
+            <MenuButton 
+              as={Button} 
+              variant="ghost" 
+              display="flex"
+              alignItems="center"
+              rightIcon={<FaChevronDown style={{ marginTop: "-70%"}} />}
+              _hover={{ color: "#008B8B" }}
+              transition="color 0.3s"
+            >
+              <Text fontSize="lg" fontWeight="medium">Services</Text>
+            </MenuButton>
+            <MenuList bg="white" shadow="lg" borderRadius="md">
+              {[
+                { label: "Hormone Replacement Therapy", link: "/hormone-replacement" },
+                { label: "Patient Care", link: "/patient-care" },
+                { label: "Virtual Visits", link: "/virtual-visits" },
+                { label: "Weight Loss Program", link: "/weight-loss" }
+              ].map((service, idx) => (
+                <MenuItem 
+                  as={Link} 
+                  key={idx} 
+                  href={service.link} 
+                  _hover={{ bg: "gray.100" }}
+                >
+                  {service.label}
+                </MenuItem>
+              ))}
+            </MenuList>
+          </Menu>
+
+          {["Urgent Care", "Membership", "Bookings", "Contact Us"].map((item, index) => (
+            <Box as="li" key={index}>
+              <Link href={`/${item.toLowerCase().replace(/\s/g, "-")}`} passHref>
+                <Text 
+                  fontSize="lg" 
+                  _hover={{ color: "#008B8B" }} 
+                  transition="color 0.3s"
+                  cursor="pointer"
+                >
+                  {item}
+                </Text>
               </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/bookings" className="nav-link text-dark hover:text-blue-600 transition-all duration-300">
-                <Text fontSize="lg" fontWeight="semibold">Bookings</Text>
+            </Box>
+          ))}
+        </Flex>
+      </Flex>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <Box 
+          display={{ base: "block", lg: "none" }} 
+          bg="white" 
+          shadow="md" 
+          py={4} 
+          mt={2} 
+          borderRadius="md"
+        >
+          <Flex flexDir="column" align="center" gap={4}>
+            {["Home", "About"].map((item, index) => (
+              <Link key={index} href={`/${item.toLowerCase()}`} passHref>
+                <Text 
+                  fontSize="lg" 
+                  _hover={{ color: "#008B8B" }} 
+                  transition="color 0.3s"
+                  cursor="pointer"
+                >
+                  {item}
+                </Text>
               </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/locator" className="nav-link text-dark hover:text-blue-600 transition-all duration-300">
-                <Text fontSize="lg" fontWeight="semibold">Contact Us</Text>
+            ))}
+            
+            {/* Mobile Dropdown - Now correctly ordered */}
+            <Menu>
+              <MenuButton 
+                as={Button} 
+                variant="ghost" 
+                rightIcon={<FaChevronDown fontWeight={100} />} 
+                _hover={{ color: "#008B8B" }}
+                transition="color 0.3s"
+              >
+                <Text fontSize="lg">Services</Text>
+              </MenuButton>
+              <MenuList bg="white" shadow="lg" borderRadius="md">
+                {[
+                  { label: "Hormone Replacement Therapy", link: "/hormone-replacement" },
+                  { label: "Patient Care", link: "/patient-care" },
+                  { label: "Virtual Visits", link: "/virtual-visits" },
+                  { label: "Weight Loss Program", link: "/weight-loss" }
+                ].map((service, idx) => (
+                  <MenuItem 
+                    as={Link} 
+                    key={idx} 
+                    href={service.link} 
+                    _hover={{ bg: "gray.100" }}
+                  >
+                    {service.label}
+                  </MenuItem>
+                ))}
+              </MenuList>
+            </Menu>
+
+            {["Urgent Care", "Membership", "Bookings", "Contact Us"].map((item, index) => (
+              <Link key={index} href={`/${item.toLowerCase().replace(/\s/g, "-")}`} passHref>
+                <Text 
+                  fontSize="lg" 
+                  fontWeight="medium" 
+                  _hover={{ color: "blue.500" }} 
+                  transition="color 0.3s"
+                  cursor="pointer"
+                >
+                  {item}
+                </Text>
               </Link>
-            </li>
-          </ul>
+            ))}
+          </Flex>
         </Box>
-      </Box>
-    </nav>
+      )}
+    </Box>
   );
 };
