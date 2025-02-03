@@ -15,7 +15,7 @@ export const Intro: React.FC = () => {
           {/* Right Content (First on Mobile) */}
           <Box flex="1" textAlign={{ base: "center", md: "left" }} maxW={{ base: "100%", md: "80%" }}>
             <Box mb={6}>
-              <Text fontSize="sm" color="#345995" fontWeight="bold" mb={2}>
+              <Text fontSize="sm" color="#008B8B" fontWeight="bold" mb={2}>
                 Welcome to Giba Medical Clinic
               </Text>
               <Heading size={{ base: "md", md: "lg" }} mb={4} color="gray.800">

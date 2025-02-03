@@ -5,7 +5,7 @@ export const MailingListPrompt = () => {
   return (
     <Box
       as="section"
-      bg="blue.700"
+      bg="#008B8B"
       color="white"
       py={{ base: 12, md: 16 }}
       px={{ base: 6, md: 12 }}

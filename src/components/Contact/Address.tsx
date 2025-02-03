@@ -14,7 +14,7 @@ export const Address = () => {
       spacing={6}
       align="center"
     >
-      <Heading fontSize={{ base: 'xl', md: '2xl' }} color="#345995" textAlign="center">
+      <Heading fontSize={{ base: 'xl', md: '2xl' }} color="#008B8B" textAlign="center">
         Our Location
       </Heading>
 

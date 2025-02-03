@@ -6,7 +6,7 @@ import { FaFacebook, FaTwitter, FaInstagram, FaDribbble } from "react-icons/fa";
 
 export const TopHeader: React.FC = () => {
   return (
-        <Box className="text-light py-2" style={{ backgroundColor: "#345995", margin: 0, padding: 0 }}>
+        <Box className="text-light py-2" style={{ backgroundColor: "#008B8B", margin: 0, padding: 0 }}>
             <Box className="container d-flex flex-column flex-md-row justify-content-between align-items-center" m={0} p={0}>
                 <Text className="mb-0">
                 <span className="font-weight-bold">Phone no:</span>

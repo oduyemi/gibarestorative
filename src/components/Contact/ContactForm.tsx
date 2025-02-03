@@ -66,7 +66,7 @@ export const ContactForm = () => {
                                 <Box className="row no-gutters">
                                     <Box className="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
                                         <Box className="contact-wrap w-100 p-md-5 p-4" bg="white" boxShadow="lg" borderRadius="md">
-                                            <Heading as="h3" mb={4} color="#345995">Get in touch</Heading>
+                                            <Heading as="h3" mb={4} color="#008B8B">Get in touch</Heading>
                                             <form onSubmit={handleSubmit}>
                                                 <Stack spacing={4}>
                                                     <Box display="flex" flexWrap="wrap" gap={4}>
@@ -145,7 +145,7 @@ export const ContactForm = () => {
                                         </Box>
                                     </Box>
                                     <Box className="col-lg-4 col-md-5 d-flex align-items-stretch">
-                                        <Box className="info-wrap w-100 p-md-5 p-4" bg="#345995" color="white" borderRadius="md">
+                                        <Box className="info-wrap w-100 p-md-5 p-4" bg="#008B8B" color="white" borderRadius="md">
                                             <Heading as="h3" mb={4}>Get in Touch</Heading>
                                             <Text mb={4}>We are open for any suggestion or just to have a chat</Text>
                                             <Box className="dbox w-100 d-flex align-items-start mb-4">

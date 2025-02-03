@@ -36,7 +36,7 @@ export const Board: React.FC = () => {
 
           {/* Center Column - Consultation Form */}
           <Box className="col-md-6 d-flex align-items-stretch">
-            <Box className="consultation consul w-100 px-4 px-md-5" bg="#345995" boxShadow="md" borderRadius="lg" p={8}>
+            <Box className="consultation consul w-100 px-4 px-md-5" bg="#008B8B" boxShadow="md" borderRadius="lg" p={8}>
               <Box className="text-center">
                 <Heading as="h3" size="lg" className="mt-5 mb-4">
                   Free Consultation

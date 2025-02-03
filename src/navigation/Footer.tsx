@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Footer = () => {
   return (
-    <Box as="footer" bg="gray.900" color="white" py={{ base: 12, md: 16 }} px={{ base: 6, md: 12 }}>
+    <Box as="footer" bg="#ccc" color="black" py={{ base: 12, md: 16 }} px={{ base: 6, md: 12 }}>
       <Box maxW="6xl" mx="auto">
         {/* Newsletter Subscription Section */}
         <Box mb={{ base: 8, md: 12 }} textAlign="center">
@@ -20,6 +20,7 @@ export const Footer = () => {
               size="lg"
               maxW={{ base: "full", md: "400px" }}
               borderRadius="md"
+              borderColor="#000"
               mb={{ base: 4, md: 0 }}
               mr={{ base: 0, md: 4 }}
               _focus={{ borderColor: "yellow.500" }}

@@ -53,7 +53,7 @@ export const Features: React.FC = () => {
                 />
               </Box>
               <Box p={6} textAlign="center">
-                <Heading size="md" mb={4} color="#345995">
+                <Heading size="md" mb={4} color="#008B8B">
                   {service.title}
                 </Heading>
                 <Text fontSize="sm" color="gray.600">
@@ -64,6 +64,7 @@ export const Features: React.FC = () => {
                   href={service.link}
                   mt={4}
                   color="#BDA023"
+                  borderColor="#BDA023"
                   variant="outline"
                   size="lg"
                   fontWeight="semibold"

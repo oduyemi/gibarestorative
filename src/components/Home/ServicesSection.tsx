@@ -36,7 +36,7 @@ export const ServicesSection: React.FC = () => {
       <Box maxW="6xl" mx="auto" textAlign="center" px={6}>
         {/* Section Title */}
         <Box mb={12}>
-          <Text fontSize="lg" fontWeight="semibold" color="blue.600" mb={2}>
+          <Text fontSize="lg" fontWeight="semibold" color="#008B8B" mb={2}>
             Our Services
           </Text>
           <Heading size="xl" fontWeight="bold" color="gray.800">
@@ -64,7 +64,7 @@ export const ServicesSection: React.FC = () => {
                 align="center"
                 w={20}
                 h={20}
-                bgGradient="linear(to-r, blue.500, blue.600)"
+                bgColor="#008B8B"
                 color="white"
                 borderRadius="full"
                 boxShadow="lg"
