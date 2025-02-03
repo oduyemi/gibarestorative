@@ -16,7 +16,7 @@ export const Membership: React.FC = () => {
               Enjoy unlimited access to healthcare professionals 
               and a range of services designed to keep you and 
               your family healthy, all from the comfort of your home.<br/><br/> 
-              You don't have to skip work, No waiting room, and 
+              You don&apos;t have to skip work, No waiting room, and 
               you will receive quality care anytime, anywhere 
               through a secured virtual platform.
             </Text>
