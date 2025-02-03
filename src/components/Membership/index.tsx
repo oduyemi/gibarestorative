@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-import { Box, Text, Heading, Icon, Button } from "@chakra-ui/react";
-import { AddIcon, SearchIcon } from "@chakra-ui/icons";
-import Link from "next/link";
+import { Box, Text, Heading, Icon } from "@chakra-ui/react";
+import { AddIcon } from "@chakra-ui/icons";
 
 export const Membership: React.FC = () => {
   return (
