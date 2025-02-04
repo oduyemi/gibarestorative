@@ -80,7 +80,8 @@ export const Banner: React.FC = () => {
                     <Link href={slide.link} passHref>
                       <Button
                         variant="outline"
-                        color="#BDA023"
+                        color="yellow.400"
+                        borderColor="yellow.400"
                         px={{ base: 4, md: 6 }}
                         py={3}
                         size="lg"
@@ -93,10 +94,9 @@ export const Banner: React.FC = () => {
                         Learn More
                       </Button>
                     </Link>
-                    <Link href="/contact" passHref>
+                    <Link href="/locator" passHref>
                       <Button
-                        bg="#BDA023"
-                        color="white"
+                        colorScheme="yellow"
                         px={{ base: 4, md: 6 }}
                         py={3}
                         size="lg"

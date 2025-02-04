@@ -32,7 +32,7 @@ export const Services: React.FC = () => {
               Explore our services below and discover how we can support your journey to a healthier, happier you.
             </Text>
             <Link href="/about">
-              <Button bg="#BDA023" size="lg" borderRadius="full" rightIcon={<BiRightArrowAlt />}>
+              <Button colorScheme="yellow" size="lg" borderRadius="full" rightIcon={<BiRightArrowAlt />}>
                 About Us
               </Button>
             </Link>
@@ -49,7 +49,7 @@ export const Services: React.FC = () => {
                   optimal health and well-being.
                 </Text>
                 <Link href="/hormone-replacement" passHref>
-                  <Button variant="link" colorScheme="teal" rightIcon={<BiRightArrowAlt />}>
+                  <Button variant="link" color="yellow.600" rightIcon={<BiRightArrowAlt />}>
                     Learn More
                   </Button>
                 </Link>
@@ -64,7 +64,7 @@ export const Services: React.FC = () => {
                   Our team offers dedicated care, ensuring that your health needs are met with the utmost professionalism and empathy.
                 </Text>
                 <Link href="/patient-care" passHref>
-                  <Button variant="link" colorScheme="teal" rightIcon={<BiRightArrowAlt />}>
+                  <Button variant="link" color="yellow.600" rightIcon={<BiRightArrowAlt />}>
                     Learn More
                   </Button>
                 </Link>
@@ -79,7 +79,7 @@ export const Services: React.FC = () => {
                   Consult with our healthcare professionals virtually, giving you the convenience and accessibility you need to stay on top of your health.
                 </Text>
                 <Link href="/virtual-care" passHref>
-                  <Button variant="link" colorScheme="teal" rightIcon={<BiRightArrowAlt />}>
+                  <Button variant="link" color="yellow.600" rightIcon={<BiRightArrowAlt />}>
                     Learn More
                   </Button>
                 </Link>
@@ -95,7 +95,7 @@ export const Services: React.FC = () => {
                   Our Weight Loss Program combines personalized meal plans, exercise routines, and continuous support to help you reach your weight loss goals effectively.
                 </Text>
                 <Link href="/weight-loss" passHref>
-                  <Button variant="link" color="teal.500" rightIcon={<BiRightArrowAlt />}>
+                  <Button variant="link" color="yellow.600" rightIcon={<BiRightArrowAlt />}>
                     Learn More
                   </Button>
                 </Link>

@@ -50,7 +50,7 @@ export default function NotFound() {
           <MotionButton
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            bgColor="#BDA023"
+            colorScheme="yellow"
             size="lg"
             onClick={() => router.push("/")}
             fontWeight="semibold"

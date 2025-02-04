@@ -119,11 +119,11 @@ export const MembershipForm: React.FC = () => {
 
           <Button 
             type="submit" 
-            colorScheme="teal" 
+            colorScheme="yellow" 
             width="full" 
             mt={4} 
             borderRadius="md"
-            _hover={{ bg: "teal.700" }}
+            // _hover={{ bg: "teal.700" }}
           >
             Apply Now
           </Button>

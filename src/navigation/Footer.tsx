@@ -70,7 +70,7 @@ export const Footer = () => {
               </Heading>
               <Stack spacing={2}>
                 <Link href="/about">About</Link>
-                <Link href="/contact">Contact</Link>
+                <Link href="/locator">Contact</Link>
                 <Link href="/membership">Members</Link>
                 <Link href="/urgent-care">Urgent Care</Link>
               </Stack>

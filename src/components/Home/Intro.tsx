@@ -39,7 +39,11 @@ export const Intro: React.FC = () => {
                 GIBA is more than just a clinic – It’s a sanctuary for healing, restoration, and transformation.
               </Text>
               <Text fontSize={{ base: "md", md: "lg" }} color="gray.600" maxW="600px">
-                We believe that true health is not just the absence of disease but a **harmonious balance** of **mind, body, and spirit**. Our **integrative approach** blends **modern medical advancements** with **holistic therapies** to create lasting vitality.
+                  We believe that true health is not just the 
+                  absence of disease but a <b>harmonious balance</b> 
+                  of <b>mind, body, and spirit</b>. Our <b>integrative 
+                  approach</b> blends <b>modern medical advancements</b> 
+                  with <b>holistic therapies</b> to create lasting vitality.
               </Text>
             </VStack>
 
@@ -47,8 +51,7 @@ export const Intro: React.FC = () => {
             <Link href="/about">
               <Button 
                 mt={6}
-                color="white" 
-                bgColor="#BDA023" 
+                colorScheme="yellow" 
                 size="lg" 
                 px={8} 
                 py={6} 

@@ -48,21 +48,28 @@ export const Header: React.FC = () => {
           gap={6} 
           display={{ base: "none", lg: "flex" }}
         >
-          {["Home", "About"].map((item, index) => (
-            <Box as="li" key={index}>
-              <Link href={`/${item.toLowerCase()}`} passHref>
-                <Text 
-                  fontSize="lg" 
-                  _hover={{ color: "#008B8B" }} 
-                  transition="color 0.3s"
-                  cursor="pointer"
-                >
-                  {item}
-                </Text>
-              </Link>
-            </Box>
-          ))}
-
+          <li>
+            <Link href="/">
+              <Text
+                fontSize="lg" 
+                _hover={{ color: "#008B8B" }} 
+                transition="color 0.3s"
+                cursor="pointer">
+                Home
+              </Text>
+            </Link>
+          </li>
+          <li>
+            <Link href="/about">
+              <Text
+                fontSize="lg" 
+                _hover={{ color: "#008B8B" }} 
+                transition="color 0.3s"
+                cursor="pointer">
+                About
+              </Text>
+            </Link>
+          </li>
           {/* Services Dropdown - Now after About */}
           <Menu>
             <MenuButton 
@@ -95,7 +102,7 @@ export const Header: React.FC = () => {
             </MenuList>
           </Menu>
 
-          {["Membership", "Bookings", "Contact Us"].map((item, index) => (
+          {["Membership", "Bookings"].map((item, index) => (
             <Box as="li" key={index}>
               <Link href={`/${item.toLowerCase().replace(/\s/g, "-")}`} passHref>
                 <Text 
@@ -109,6 +116,17 @@ export const Header: React.FC = () => {
               </Link>
             </Box>
           ))}
+          <li>
+            <Link href="/locator">
+              <Text
+                fontSize="lg" 
+                _hover={{ color: "#008B8B" }} 
+                transition="color 0.3s"
+                cursor="pointer">
+                Contact
+              </Text>
+            </Link>
+          </li>
         </Flex>
       </Flex>
 

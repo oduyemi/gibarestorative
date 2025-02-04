@@ -34,8 +34,7 @@ export const MailingListPrompt = () => {
             mr={{ base: 0, md: 4 }}
           />
           <Button
-            bg="yellow.400"
-            color="blue.700"
+            colorScheme="yellow"
             size="lg"
             px={8}
             borderRadius="full"

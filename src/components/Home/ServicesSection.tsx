@@ -82,7 +82,7 @@ export const ServicesSection: React.FC = () => {
               </Text>
               <Link href={pkg.link}>
                 <Button
-                  colorScheme="blue"
+                  colorScheme="yellow"
                   variant="solid"
                   size="lg"
                   px={6}
@@ -90,8 +90,7 @@ export const ServicesSection: React.FC = () => {
                   fontWeight="semibold"
                   borderRadius="full"
                   transition="all 0.3s ease"
-                  bgColor="#BDA023" 
-                  _hover={{ bgGradient: "linear(to-r, blue.600, blue.700)" }}
+                  // _hover={{ bgGradient: "linear(to-r, blue.600, blue.700)" }}
                 >
                   Learn More
                 </Button>

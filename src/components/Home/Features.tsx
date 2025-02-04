@@ -63,8 +63,8 @@ export const Features: React.FC = () => {
                   as={Link}
                   href={service.link}
                   mt={4}
-                  color="#BDA023"
-                  borderColor="#BDA023"
+                  color="yellow.400"
+                  borderColor="yellow.400"
                   variant="outline"
                   size="lg"
                   fontWeight="semibold"

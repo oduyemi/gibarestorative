@@ -22,8 +22,8 @@ export const Board: React.FC = () => {
               <Link href="/services" className="btn-custom">
                 <Button 
                   variant="outline" 
-                  color="#BDA023" 
-                  borderColor="#BDA023" 
+                  color="yellow.400" 
+                  borderColor="yellow.400" 
                   mt={4}
                   size="lg"
                   fontWeight="semibold"
@@ -95,8 +95,7 @@ export const Board: React.FC = () => {
                     <Box className="form-group">
                       <Button 
                         className="btn py-2 px-4"   
-                        bgColor="#BDA023"  
-                        color="#fff" 
+                        colorScheme="yellow"  
                         w="full"
                         size="lg"
                         fontWeight="semibold"
@@ -130,8 +129,8 @@ export const Board: React.FC = () => {
               <Link href="/locator" className="btn-custom">
                 <Button 
                   variant="outline" 
-                  borderColor="#BDA023" 
-                  color="#BDA023" 
+                  borderColor="yellow.400" 
+                  color="yellow.400" 
                   mt={4}
                   size="lg"
                   fontWeight="semibold"

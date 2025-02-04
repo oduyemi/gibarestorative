@@ -126,8 +126,7 @@ export const ContactForm = () => {
                                                     <Box>
                                                         <Button
                                                             type="submit"
-                                                            bgColor="#BDA023"
-                                                            color="white"
+                                                            colorScheme="yellow"
                                                             size="lg"
                                                             width="full"
                                                             fontWeight="semibold"
@@ -135,7 +134,7 @@ export const ContactForm = () => {
                                                             transition="all 0.3s ease"
                                                             isLoading={isLoading}
                                                             loadingText="Sending..."
-                                                            _hover={{ bg: "gray.300", color: "black" }}
+                                                            // _hover={{ bg: "gray.300", color: "black" }}
                                                         >
                                                             Send Message
                                                         </Button>

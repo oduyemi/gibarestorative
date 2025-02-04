@@ -54,8 +54,7 @@ export const AdBlock: React.FC = () => {
           <Link href="#" passHref>
             <Button
               as="a"
-              bg="#BDA023"
-              color="blue.700"
+              colorScheme="yellow.400"
               size="lg"
               px={10}
               py={6}
