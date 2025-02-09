@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <Box as="nav" bg="white" shadow="md" py={4} px={6} position="sticky" top={0} zIndex={10}>
+    <Box as="nav" bg="white" shadow="md" py={4} px={6} position="sticky" top={3} zIndex={2000}>
       <Flex justify="space-between" align="center">
         
         {/* Logo */}
@@ -23,9 +23,9 @@ export const Header: React.FC = () => {
           <Image 
             src="/assets/images/logo.png" 
             alt="Logo" 
-            width={120} 
-            height={50} 
-            className="object-contain"
+            width={100} 
+            height={100} 
+            className="object-cover w-100 mt-3"
           />
         </Link>
 
@@ -47,12 +47,14 @@ export const Header: React.FC = () => {
           align="center" 
           gap={6} 
           display={{ base: "none", lg: "flex" }}
+          className="mt-4"
         >
           <li>
             <Link href="/">
               <Text
                 fontSize="lg" 
                 _hover={{ color: "#008B8B" }} 
+                _active={{ color: "#008B8B" }}
                 transition="color 0.3s"
                 cursor="pointer">
                 Home

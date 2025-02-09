@@ -36,8 +36,7 @@ export const Banner: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden" height="100vh">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        navigation
+        modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000 }}
         loop

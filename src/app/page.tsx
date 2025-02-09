@@ -7,6 +7,7 @@ import { Intro } from "@/components/Home/Intro";
 import { Board } from "@/components/Home/Board";
 import { ServicesSection } from "@/components/Home/ServicesSection";
 import { MailingListPrompt } from "@/components/MailinListPrompt";
+import { Ceo } from "@/components/Booking/Ceo";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
           <Features />
           <Intro />
           <Board />
+          <Ceo />
           {/* <Reviews /> */}
           <ServicesSection />
           {/* <Stories /> */}

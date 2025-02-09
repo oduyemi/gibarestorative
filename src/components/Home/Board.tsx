@@ -102,7 +102,7 @@ export const Board: React.FC = () => {
                         borderRadius="full"
                         transition="all 0.3s ease"
                       >
-                        Appointment
+                        Book Now
                       </Button>
                     </Box>
                   </Box>

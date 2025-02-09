@@ -3,6 +3,7 @@ import { AboutBanner } from "@/components/About/Banner";
 import { AboutIntro } from "@/components/About/Intro";
 import { Board } from "@/components/Home/Board";
 import { MailingListPrompt } from "@/components/MailinListPrompt";
+import { Ceo } from "@/components/Booking/Ceo";
 
 
 export default function about () {
@@ -12,6 +13,7 @@ export default function about () {
             <AboutBanner />
             <AboutIntro />
             <Board />
+            <Ceo />
             <Box className="mt-5">
                 <MailingListPrompt />
             </Box>
