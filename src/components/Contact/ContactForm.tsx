@@ -6,11 +6,11 @@ import Link from "next/link";
 
 export const ContactForm = () => {
     const [isLoading, setIsLoading] = useState(false);
-    const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
-    const [errors, setErrors] = useState({ name: "", email: "", subject: "", message: "" });
+    const [formData, setFormData] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
+    const [errors, setErrors] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
 
     const validateForm = () => {
-        const formErrors = { name: "", email: "", subject: "", message: "" }; 
+        const formErrors = { name: "", email: "", phone: "", subject: "", message: "" }; 
         let isValid = true;
 
         if (!formData.name) {
@@ -26,6 +26,14 @@ export const ContactForm = () => {
             isValid = false;
         }
 
+        if (!formData.phone) {
+            formErrors.phone = "Phone number is required";
+            isValid = false;
+        } else if (!/^\d{7,15}$/.test(formData.phone)) {
+            formErrors.phone = "Phone number is not valid";
+            isValid = false;
+        }
+
         if (!formData.subject) {
             formErrors.subject = "Subject is required";
             isValid = false;
@@ -38,11 +46,11 @@ export const ContactForm = () => {
 
         setErrors(formErrors);
         return isValid;
-    };
+        };
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
+        const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+            setFormData({ ...formData, [e.target.name]: e.target.value });
+        };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -95,6 +103,19 @@ export const ContactForm = () => {
                                                                 _focus={{ borderColor: "teal.500" }}
                                                             />
                                                             {errors.email && <FormErrorMessage>{errors.email}</FormErrorMessage>}
+                                                        </FormControl>
+                                                        <FormControl id="phone" isRequired isInvalid={!!errors.phone}>
+                                                            <FormLabel>Phone Number</FormLabel>
+                                                            <Input
+                                                                type="number"
+                                                                name="phone"
+                                                                value={formData.phone}
+                                                                onChange={handleChange}
+                                                                placeholder="Phone number"
+                                                                borderColor={errors.phone ? "red.500" : "gray.300"}
+                                                                _focus={{ borderColor: "teal.500" }}
+                                                            />
+                                                            {errors.phone && <FormErrorMessage>{errors.phone}</FormErrorMessage>}
                                                         </FormControl>
                                                     </Box>
                                                     <FormControl id="subject" isRequired isInvalid={!!errors.subject}>
