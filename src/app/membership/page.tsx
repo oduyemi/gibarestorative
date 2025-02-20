@@ -1,8 +1,8 @@
 import { Box } from "@chakra-ui/react";
-import { MailingListPrompt } from "@/components/MailinListPrompt";
 import { MembershipBanner } from "@/components/Membership/Banner";
 import { Membership } from "@/components/Membership";
 import { MembershipForm } from "@/components/Membership/MembershipForm";
+import { Schedule } from "@/components/ScheduleCTA";
 
 
 
@@ -11,8 +11,8 @@ export default function locator () {
         <Box>
             <MembershipBanner />
             <Membership />
+            <Schedule />
             <MembershipForm />
-            <MailingListPrompt />
         </Box>
     )
 }
