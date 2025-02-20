@@ -90,7 +90,7 @@ export const Header: React.FC = () => {
                 { label: "Hormone Replacement Therapy", link: "/hormone-replacement" },
                 { label: "Patient Care", link: "/patient-care" },
                 { label: "Virtual Visits", link: "/virtual-care" },
-                { label: "Weight Loss Program", link: "/weight-loss" }
+                { label: "Weight Loss Program", link: "/weightloss" }
               ].map((service, idx) => (
                 <MenuItem 
                   as={Link} 
@@ -172,7 +172,7 @@ export const Header: React.FC = () => {
                   { label: "Hormone Replacement Therapy", link: "/hormone-replacement" },
                   { label: "Patient Care", link: "/patient-care" },
                   { label: "Virtual Visits", link: "/virtual-care" },
-                  { label: "Weight Loss Program", link: "/weight-loss" }
+                  { label: "Weight Loss Program", link: "/weightloss" }
                 ].map((service, idx) => (
                   <MenuItem 
                     as={Link} 

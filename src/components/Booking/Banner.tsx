@@ -6,9 +6,9 @@ import { SiteBanner } from "../SiteBanner"
 export const BookingBanner = () => {
     return(
         <SiteBanner
-            title="Booking" 
+            title="Bookings" 
             backgroundImage="/assets/images/contacthero.jpg" 
-            breadcrumbs={[{ label: "Home", href: "/" }, { label: "Booking" }]} 
+            breadcrumbs={[{ label: "Home", href: "/" }, { label: "Bookings" }]} 
         />
     )
 }

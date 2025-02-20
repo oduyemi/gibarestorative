@@ -43,7 +43,7 @@ export const Footer = () => {
           {/* Logo and Description */}
           <Box flex="1" textAlign={{ base: "center", md: "left" }}>
             <Link href="/" display="flex" alignItems="center">
-              <Image src="/assets/images/logo.png" alt="Logo" width={100} height={100} objectFit="contain" />
+              <Image src="/assets/images/logo.png" alt="Logo" width={100} height={100}  />
             </Link>
             <Text mt={4} opacity={0.7}>
               We blend modern medicine with holistic wellness to help you look, feel, and live better.
