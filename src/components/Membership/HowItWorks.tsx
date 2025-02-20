@@ -1,7 +1,7 @@
 "use client";
 import { Box, Heading, Flex, Button } from "@chakra-ui/react";
 import { StepCard } from "../StepCard"; 
-import { BsSearch, BsCartPlus, BsCreditCard } from "react-icons/bs";
+import { BsSearch, BsCartPlus } from "react-icons/bs";
 import Link from "next/link";
 
 

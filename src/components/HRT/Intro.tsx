@@ -3,7 +3,6 @@ import {
   Box,
   Grid,
   GridItem,
-  Heading,
   Text,
   Button,
   Flex,
