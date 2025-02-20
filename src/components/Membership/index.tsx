@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Box, Text, Heading, Divider, Container, VStack } from "@chakra-ui/react";
-import { MembershipBenefits } from "./Benefits"; // Ensure this is a Client Component
+import { MembershipBenefits } from "./Benefits"; 
 
 export const Membership: React.FC = () => {
   return (
