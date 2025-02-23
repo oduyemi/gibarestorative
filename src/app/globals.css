@@ -327,7 +327,9 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1); 
 }
 
-
+.up {
+  margin-top: -70% !important;
+}
 
 .headerlogo {
   margin-top: -2% !important;

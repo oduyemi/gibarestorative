@@ -11,9 +11,9 @@ export const TopHeader: React.FC = () => {
                 <Text className="mb-0">
                 <span className="font-weight-bold ms-5">Phone no:</span>
                 <ChakraLink as={Link} href="" className="text-light ml-1">(346)545-1355</ChakraLink>
-                <span className="ml-4 font-weight-bold">Email us:</span>
+                <span className="font-weight-bold ms-3">Email us:</span>
                     &nbsp;info@gibarestorative.com
-                <span className="ml-5 font-weight-light">New Year Special - 10% off of any Weight Loss Program</span>
+                <span className="ms-3 font-weight-light">New Year Special - 10% off of any Weight Loss Program</span>
                 </Text>
                 <Box className="d-flex mt-2 mt-md-0">
                     <ChakraLink as={Link} href="" className="text-light mx-2">

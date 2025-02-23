@@ -72,7 +72,7 @@ export const Header: React.FC = () => {
               variant="ghost" 
               display="flex"
               alignItems="center"
-              rightIcon={<FaChevronDown />}
+              rightIcon={<FaChevronDown className="up" />}
               _hover={{ color: "#008B8B" }}
             >
               <Text fontSize="lg" fontWeight="normal">Services</Text>
