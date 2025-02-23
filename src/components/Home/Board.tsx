@@ -126,7 +126,7 @@ export const Board: React.FC = () => {
                 and virtual care membership, your quality 
                 care is just one click away.
               </Text>
-              <Link href="/locator" className="btn-custom">
+              <Link href="/contact" className="btn-custom">
                 <Button 
                   variant="outline" 
                   borderColor="yellow.400" 

@@ -13,7 +13,7 @@ export const WorkingHours = () => {
   ];
 
   return (
-    <Box p={6} bg="gray.50" boxShadow="lg" borderRadius="lg" maxW="600px" mx="auto">
+    <Box p={6} bg="gray.50" boxShadow="lg" borderRadius="lg" maxW="600px" mx="auto" mt="5">
       <VStack spacing={6}>
         <Text fontSize="3xl" fontWeight="bold" textAlign="center" color="#008B8B">
           Our Working Hours

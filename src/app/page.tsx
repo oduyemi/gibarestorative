@@ -4,10 +4,9 @@ import { Box } from "@chakra-ui/react";
 import { Banner } from "@/components/Home/Banner";
 import { Features } from "@/components/Home/Features";
 import { Intro } from "@/components/Home/Intro";
-import { Board } from "@/components/Home/Board";
 import { ServicesSection } from "@/components/Home/ServicesSection";
-import { MailingListPrompt } from "@/components/MailinListPrompt";
-import { Ceo } from "@/components/Booking/Ceo";
+import { Ceo } from "@/components/About/Ceo";
+import { Schedule } from "@/components/ScheduleCTA";
 
 export default function Home() {
   return (
@@ -17,12 +16,9 @@ export default function Home() {
           <Banner />
           <Features />
           <Intro />
-          <Board />
+          <Schedule />
           <Ceo />
-          {/* <Reviews /> */}
           <ServicesSection />
-          {/* <Stories /> */}
-          <MailingListPrompt />
         </Box> 
         </main>
     </div>

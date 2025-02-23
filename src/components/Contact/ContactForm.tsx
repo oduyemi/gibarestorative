@@ -65,7 +65,7 @@ export const ContactForm = () => {
     };
 
     return (
-        <section className="ftco-section bg-light">
+        <section className="ftco-section bg-light mt-5">
             <Center>
                 <Box className="container" maxW="1200px">
                     <Box className="row justify-content-center">

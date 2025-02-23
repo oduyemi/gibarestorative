@@ -5,6 +5,7 @@ export const Address = () => {
   return (
     <VStack
       p={{ base: 4, md: 6 }}
+      mt="5"
       bg="gray.50"
       boxShadow="lg"
       borderRadius="lg"

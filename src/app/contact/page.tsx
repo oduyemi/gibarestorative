@@ -5,7 +5,7 @@ import { WorkingHours } from "@/components/Contact/WorkingHours";
 import { Address } from "@/components/Contact/Address";
 
 
-export default function locator () {
+export default function contact () {
     return(
         <Box>
             <ContactBanner />

@@ -26,7 +26,7 @@ export const Ceo: React.FC = () => {
             bgPosition="center"
             bgSize="cover"
             minH={{ base: "300px", md: "auto" }}
-            w={{ base: "full", md: "40%" }}
+            w={{ base: "full", md: "40%", sm: "10%" }}
             position="relative"
           >
             <HStack

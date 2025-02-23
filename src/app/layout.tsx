@@ -2,7 +2,6 @@
 
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import "./globals.css";
-import "../css/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css";
 import { TopHeader } from "@/navigation/TopHeader";
