@@ -12,7 +12,7 @@ export const Banner: React.FC = () => {
   const slides = [
     {
       id: 1,
-      background: "url(assets/images/doctor.jpg)",
+      background: "url(assets/images/hero.jpg)",
       title: "Welcome to Giba Medical Clinic",
       subtitle:
         "We help you achieve your weight loss goal and improve your quality of life with a holistic approach.",
@@ -20,7 +20,7 @@ export const Banner: React.FC = () => {
     },
     {
       id: 2,
-      background: "url(assets/images/doctor3.jpg)",
+      background: "url(assets/images/hero1.jpg)",
       title: "Rework Your Hormones",
       subtitle: "Specially for women who are ready to restore their hormones naturally.",
       link: "/hormone-replacement",
