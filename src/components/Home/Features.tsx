@@ -42,21 +42,21 @@ export const Features: React.FC = () => {
               transition="transform 0.3s"
               _hover={{ transform: "scale(1.05)" }}
             >
-              <Box position="relative" w="full" h="200px">
+              <Box position="relative" w="full" h="200px" className="b">
                 <Image
                   src={service.image}
                   alt={service.title}
                   layout="fill"
-                  className="img-responsive"
+                  className="img-responsive img-fluid"
                   objectFit="cover"
                   objectPosition="center"
                 />
               </Box>
-              <Box p={6} textAlign="center">
-                <Heading size="md" mb={4} color="#008B8B">
+              <Box p={6} textAlign="center" className="b space">
+                <Heading size="md" mb={4} color="#008B8B" className="dHead">
                   {service.title}
                 </Heading>
-                <Text fontSize="sm" color="gray.600">
+                <Text fontSize="sm" color="gray.600" className="dHead">
                   {service.description}
                 </Text>
                 <Button
