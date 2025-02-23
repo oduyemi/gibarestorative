@@ -9,7 +9,10 @@ import {
   Flex,
   Icon,
   Image,
+  Card,
+  CardBody,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { FaCog, FaFire } from "react-icons/fa";
 
 export const ChooseYourNewLook = () => {
@@ -38,65 +41,84 @@ export const ChooseYourNewLook = () => {
             <Text fontSize={{ base: "md", md: "lg" }} color="gray.600" mb={4}>
               Obesity is a complex condition caused by excessive body fat, leading to serious health risks such as heart disease, diabetes, and high blood pressure. Traditional weight loss methods may not be sufficient, making medically supervised programs more effective.
             </Text>
-            <Text fontSize={{ base: "md", md: "lg" }} color="gray.700" mb={4}>
+            <Text fontSize={{ base: "md", md: "lg" }} color="gray.700" mb={6}>
               At Giba, we analyze underlying causes like hormonal imbalances and health conditions to create personalized weight-loss plans for better results.
             </Text>
 
             {/* Features Section */}
-            <Flex direction={{ base: "column", md: "row" }} gap={6} mt={6}>
+            <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={6}>
               {/* Feature 1 */}
-              <Flex align="center">
-                <Box
-                  w={12}
-                  h={12}
-                  bg="yellow.100"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  borderRadius="full"
-                  mr={4}
-                >
-                  <Icon as={FaCog} color="yellow.500" boxSize={6} />
-                </Box>
-                <Box>
-                  <Heading as="h3" fontSize="lg" mb={1}>Versatile Brand</Heading>
-                  <Text color="gray.600">We craft digital solutions that thrive across all platforms.</Text>
-                </Box>
-              </Flex>
+              <Card borderRadius="xl" boxShadow="md" p={4} transition="all 0.3s" _hover={{ boxShadow: "xl", transform: "scale(1.02)" }}>
+                <CardBody>
+                  <Flex align="center">
+                    <Box
+                      w={12}
+                      h={12}
+                      bg="yellow.100"
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="center"
+                      borderRadius="full"
+                      mr={4}
+                    >
+                      <Icon as={FaCog} color="yellow.500" boxSize={6} />
+                    </Box>
+                    <Box>
+                      <Heading as="h3" fontSize="lg" mb={1}>Semaglutide/Tirzepatide</Heading>
+                      <Text color="gray.600" fontSize="sm">Invest in your health for just <b>$299/month</b>.</Text>
+                    </Box>
+                  </Flex>
+                  <Link href="/bookings">
+                    <Button
+                      mt={4}
+                      size="md"
+                      colorScheme="yellow"
+                      borderRadius="full"
+                      w="full"
+                      _hover={{ bg: "yellow.500", transform: "scale(1.05)" }}
+                    >
+                      Start Now
+                    </Button>
+                  </Link>
+                </CardBody>
+              </Card>
 
               {/* Feature 2 */}
-              <Flex align="center">
-                <Box
-                  w={12}
-                  h={12}
-                  bg="red.100"
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  borderRadius="full"
-                  mr={4}
-                >
-                  <Icon as={FaFire} color="red.500" boxSize={6} />
-                </Box>
-                <Box>
-                  <Heading as="h3" fontSize="lg" mb={1}>Digital Agency</Heading>
-                  <Text color="gray.600">We drive innovation by blending bold and intricate ideas.</Text>
-                </Box>
-              </Flex>
-            </Flex>
-
-            {/* CTA Button */}
-            <Button
-              mt={8}
-              size="lg"
-              colorScheme="yellow"
-              borderRadius="full"
-              px={8}
-              _hover={{ bg: "yellow.500", transform: "scale(1.05)" }}
-              transition="all 0.3s ease"
-            >
-              Learn More
-            </Button>
+              <Card borderRadius="xl" boxShadow="md" p={4} transition="all 0.3s" _hover={{ boxShadow: "xl", transform: "scale(1.02)" }}>
+                <CardBody>
+                  <Flex align="center">
+                    <Box
+                      w={12}
+                      h={12}
+                      bg="red.100"
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="center"
+                      borderRadius="full"
+                      mr={4}
+                    >
+                      <Icon as={FaFire} color="red.500" boxSize={6} />
+                    </Box>
+                    <Box>
+                      <Heading as="h3" fontSize="lg" mb={1}>Adipex/Phentermine</Heading>
+                      <Text color="gray.600" fontSize="sm">Invest in your health for just <b>$299/month</b>.</Text>
+                    </Box>
+                  </Flex>
+                  <Link href="/bookings">
+                    <Button
+                      mt={4}
+                      size="md"
+                      colorScheme="yellow"
+                      borderRadius="full"
+                      w="full"
+                      _hover={{ bg: "yellow.500", transform: "scale(1.05)" }}
+                    >
+                      Start Now
+                    </Button>
+                  </Link>
+                </CardBody>
+              </Card>
+            </Grid>
           </GridItem>
         </Grid>
       </Box>

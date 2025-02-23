@@ -4,16 +4,17 @@ import Link from "next/link";
 
 export const WeightLossServices = () => {
   return (
-    <Box maxW="7xl" mx="auto" py={{ base: 10, md: 14 }} px={{ base: 6, md: 10 }}>
+    <Box maxW="6xl" mx="auto" py={{ base: 12, md: 16 }} px={{ base: 5, md: 8 }}>
       {/** HEADER SECTION */}
       <Heading
         as="h1"
         size="2xl"
         textAlign="center"
-        mb={8}
+        mb={10}
         bgGradient="linear(to-r, teal.500, yellow.400)"
         bgClip="text"
-        fontWeight="bold"
+        fontWeight="extrabold"
+        textShadow="1px 1px 2px rgba(0, 0, 0, 0.2)"
       >
         Weight Loss Services
         <Text as="small" display="block" fontSize="lg" color="gray.500">
@@ -49,20 +50,17 @@ export const WeightLossServices = () => {
           key={index}
           direction={{ base: "column", md: index % 2 === 0 ? "row" : "row-reverse" }}
           align="center"
-          gap={10}
-          mb={{ base: 12, md: 14 }}
+          gap={12}
+          mb={{ base: 12, md: 16 }}
         >
           {/** IMAGE */}
           <Box
-            flex={{ base: "1", md: "0.6" }}
+            flex={{ base: "1", md: "0.5" }}
             borderRadius="xl"
             overflow="hidden"
             boxShadow="lg"
             transition="transform 0.4s ease, box-shadow 0.4s ease"
-            _hover={{
-              transform: "scale(1.05)",
-              boxShadow: "2xl",
-            }}
+            _hover={{ transform: "scale(1.05)", boxShadow: "2xl" }}
           >
             <Link href={service.link}>
               <Image
@@ -79,19 +77,19 @@ export const WeightLossServices = () => {
           {/** TEXT CONTENT */}
           <Box
             flex="1"
-            p={{ base: 6, md: 8 }}
+            p={{ base: 6, md: 10 }}
             bg="rgba(255, 255, 255, 0.85)"
-            borderRadius="xl"
-            boxShadow="lg"
-            backdropFilter="blur(10px)"
+            borderRadius="2xl"
+            boxShadow="2xl"
+            backdropFilter="blur(12px)"
             textAlign={{ base: "center", md: "left" }}
             transition="all 0.3s ease"
             _hover={{ boxShadow: "xl", transform: "scale(1.02)" }}
           >
-            <Heading as="h3" size="lg" mb={4} color="teal.600">
+            <Heading as="h3" size="lg" mb={4} color="teal.600" fontWeight="bold">
               {service.title}
             </Heading>
-            <Text color="gray.700" mb={6} fontSize={{ base: "md", md: "lg" }}>
+            <Text color="gray.700" mb={6} fontSize={{ base: "md", md: "lg" }} fontWeight="medium">
               {service.description}
             </Text>
             <Link href={service.link} passHref>
@@ -99,16 +97,16 @@ export const WeightLossServices = () => {
                 as="a"
                 colorScheme="yellow"
                 size="lg"
-                px={10}
+                px={12}
                 borderRadius="full"
+                fontWeight="bold"
+                boxShadow="md"
                 _hover={{
                   bg: "yellow.500",
                   transform: "scale(1.05)",
-                  boxShadow: "md",
+                  boxShadow: "lg",
                 }}
-                _active={{
-                  transform: "scale(0.97)",
-                }}
+                _active={{ transform: "scale(0.97)" }}
                 transition="all 0.3s ease"
               >
                 Learn More
