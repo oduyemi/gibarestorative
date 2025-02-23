@@ -20,7 +20,7 @@ export const ChooseYourNewLook = () => {
           {/* Image Section */}
           <GridItem>
             <Image
-              src="/assets/images/child.jpg"
+              src="/assets/images/weightscale.jpg"
               alt="Child"
               h={{ base: "300px", md: "450px" }}
               borderRadius="xl"

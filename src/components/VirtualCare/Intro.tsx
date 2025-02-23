@@ -19,7 +19,7 @@ export const VirtualIntro = () => {
           {/* Image Section */}
           <GridItem>
             <Image
-              src="/assets/images/virtual-visit.jpg"
+              src="/assets/images/vcare1.jpeg"
               alt="Virtual Consultation"
               h={{ base: "300px", md: "450px" }}
               borderRadius="xl"
@@ -125,7 +125,7 @@ export const VirtualIntro = () => {
             <Button
               mt={8}
               size="lg"
-              colorScheme="blue"
+              colorScheme="yellow"
               borderRadius="full"
               px={8}
               _hover={{ bg: "blue.500", transform: "scale(1.05)" }}

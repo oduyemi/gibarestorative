@@ -9,7 +9,7 @@ export const AboutIntro = () => {
           {/* Image Section */}
           <GridItem>
             <Box
-              bgImage="url(/assets/images/child.jpg)"
+              bgImage="url(/assets/images/abtt.png)"
               bgSize="cover"
               bgPosition="center"
               h={{ base: "250px", md: "400px" }}
@@ -25,7 +25,7 @@ export const AboutIntro = () => {
             <Flex direction="column" textAlign={{ base: "center", md: "left" }}>
               <Text
                 fontSize="sm"
-                color="blue.500"
+                color="teal.500"
                 fontWeight="bold"
                 textTransform="uppercase"
                 mb={2}

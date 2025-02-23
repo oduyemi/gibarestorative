@@ -19,7 +19,7 @@ export const HRTIntro = () => {
           {/* Image Section */}
           <GridItem>
             <Image
-              src="/assets/images/hormone.jpg"
+              src="/assets/images/hrt1.jpg"
               alt="Child"
               h={{ base: "300px", md: "450px" }}
               borderRadius="xl"
@@ -47,11 +47,11 @@ export const HRTIntro = () => {
           maxWidth="700px"
           mx="auto"
         >
-          HRT is a medical therapy for hormonal imbalances. It is designed to alleviate symptoms associated with hormonal imbalances or deficiencies.
+          HRT is a medical therapy for hormonal imbalances. 
+          It is designed to alleviate symptoms associated 
+          with hormonal imbalances or deficiencies.
         </Text>
      
-
-
             <Text
               fontSize={{ base: "md", md: "lg" }}
               color="gray.700"
