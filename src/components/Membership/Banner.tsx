@@ -7,7 +7,7 @@ export const MembershipBanner = () => {
     return(
         <SiteBanner
             title="Membership" 
-            backgroundImage="/assets/images/contacthero.jpg" 
+            backgroundImage="/assets/images/healthcare.jpg" 
             breadcrumbs={[{ label: "Home", href: "/" }, { label: "Membership" }]} 
         />
     )
