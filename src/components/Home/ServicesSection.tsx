@@ -40,7 +40,7 @@ export const ServicesSection: React.FC = () => {
           <Text fontSize="lg" fontWeight="semibold" color="#008B8B" mb={2}>
             Our Services
           </Text>
-          <Heading size="xl" fontWeight="bold" color="gray.800" letterSpacing="wide">
+          <Heading size="xl" fontWeight="bold" color="gray.800" letterSpacing="wide" className="bHead">
             Our Affordable Packages
           </Heading>
         </Box>
@@ -92,7 +92,7 @@ export const ServicesSection: React.FC = () => {
                 </Heading>
 
                 {/* Service Description */}
-                <Text textAlign="center" color="gray.600" px={4} mb={6} fontSize={{ base: "sm", md: "md" }}>
+                <Text textAlign="center" color="gray.600" px={4} mb={6} fontSize={{ base: "sm", md: "md" }} className="hHead">
                   {pkg.description}
                 </Text>
 

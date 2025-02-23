@@ -100,6 +100,7 @@ export const Banner: React.FC = () => {
                   textAlign={{ base: "center", md: "left" }}
                   px={{ base: 6, sm: 8, md: 0 }} 
                   mx="auto"
+                  className="hHead"
                 >
                   {slide.subtitle}
                 </Text>

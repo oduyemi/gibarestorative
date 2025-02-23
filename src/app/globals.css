@@ -366,21 +366,13 @@ hr {
     padding-right: 12%;
   }
   .hHead{
-    width: fit-content !important;
+    width: 30% !important;
     padding-left: -17% !important;
     padding-right: -12% !important;
   }
-  .fit{
-    width: fit-content !important;
-  }
-  .beat{
-    width: fit-content !important;
-  }
+ 
   .slide{
     background-size: contain !important;
   }
-  .hero-texts{
-    position: relative !important;
-    top: 50% !important;
-  }
+  
 }
