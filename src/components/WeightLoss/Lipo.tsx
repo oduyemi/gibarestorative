@@ -28,7 +28,7 @@ export const Lipo = () => {
       {/* Lipo-C Section */}
       <Box mb={12}>
         <Heading as="h3" size="xl" fontWeight="bold" color="teal.600" mb={4}>
-          LIPO-C "SKINNY SHOTS"
+          LIPO-C &apos;&apos;SKINNY SHOTS&apos;&apos;
         </Heading>
         <SimpleGrid columns={gridColumns} spacing={8} alignItems="center">
           <Box>
@@ -51,7 +51,7 @@ export const Lipo = () => {
               <ListItem><strong>Methionine:</strong> An essential amino acid. An antioxidant that aids in fat breakdown.</ListItem>
               <ListItem><strong>Inositol:</strong> Helps with the metabolism of fats and reduces cholesterol.</ListItem>
               <ListItem><strong>Choline:</strong> Supports liver function and fat metabolism.</ListItem>
-              <ListItem><strong>Carnitine:</strong> Increases energy levels by transporting fatty acids into the cells' mitochondria.</ListItem>
+              <ListItem><strong>Carnitine:</strong> Increases energy levels by transporting fatty acids into the cells&apos; mitochondria.</ListItem>
             </UnorderedList>
 
             <Divider my={4} />
