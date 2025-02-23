@@ -71,9 +71,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
-p {
+/* p {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem; } */
 
 .navbar,
 .text-light {
@@ -365,12 +365,22 @@ hr {
     padding-left: 17%;
     padding-right: 12%;
   }
+  .hHead{
+    width: fit-content !important;
+    padding-left: -17% !important;
+    padding-right: -12% !important;
+  }
   .fit{
     width: fit-content !important;
   }
   .beat{
     width: fit-content !important;
   }
+  .slide{
+    background-size: contain !important;
+  }
+  .hero-texts{
+    position: relative !important;
+    top: 50% !important;
+  }
 }
-
-

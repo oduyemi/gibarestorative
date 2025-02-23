@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export const Banner: React.FC = () => {
+  
   const slides = [
     {
       id: 1,
@@ -27,7 +28,7 @@ export const Banner: React.FC = () => {
     },
     {
       id: 3,
-      background: "url(assets/images/doctor2.jpg)",
+      background: "url(assets/images/hero2.jpg)",
       title: "Free Consultation",
       subtitle:
         "Let's get to know each other during a 15-minute video call. You can ask questions and we will explain how I can assist you.",
@@ -36,107 +37,121 @@ export const Banner: React.FC = () => {
   ];
 
   return (
-    <Box position="relative" overflow="hidden" height={{ base: "60vh", md: "90vh", lg: "100vh" }}>
+    <Box position="relative" overflow="hidden" height={{ base: "50vh", md: "90vh", lg: "100vh" }}>
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
         autoplay={{ delay: 5000 }}
         loop
+        spaceBetween={10} 
+        slidesPerView={1} 
+        breakpoints={{
+          768: {
+            slidesPerView: 1,
+          },}}
         className="home-slider"
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <Box
-              height={{ base: "75vh", md: "90vh", lg: "100vh" }}
+              height={{ base: "50vh", md: "90vh", lg: "100vh" }}
               backgroundImage={slide.background}
               backgroundSize="cover"
               backgroundPosition="center"
               position="relative"
+              className="slide"
             >
               {/* Overlay */}
               <Box position="absolute" top={0} left={0} width="100%" height="100%" bg="blackAlpha.600" />
 
               {/* Content */}
-              <Box
-                position="absolute"
-                top="50%"
-                left={{ base: "5%", md: "10%" }}
-                transform="translateY(-50%)"
-                zIndex={2}
-                width={{ base: "90%", sm: "85%", md: "600px" }}
-                px={{ base: 6, md: 10 }}
-                color="white"
+            <Box
+              position="absolute"
+              top="50%"
+              left="50%"
+              transform="translate(-50%, -50%)"
+              zIndex={2}
+              width={{ base: "90%", sm: "85%", md: "600px" }}
+              px={{ base: 4, md: 10 }}
+              color="white"
+              textAlign={{ base: "center", md: "left" }} 
+            >
+              <VStack
+                spacing={{ base: 4, md: 6 }}
+                alignItems={{ base: "center", md: "flex-start" }} 
               >
-                <VStack spacing={{ base: 4, md: 6 }} textAlign="left" alignItems="flex-start">
-                  <Heading
-                    as="h2"
-                    fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
-                    fontWeight="bold"
-                    color="teal.200"
-                    textTransform="uppercase"
-                    letterSpacing="wide"
-                    lineHeight="1.2"
-                  >
-                    {slide.title}
-                  </Heading>
-                  <Text
-                    fontSize={{ base: "lg", sm: "xl", md: "2xl" }}
-                    fontWeight="normal"
-                    lineHeight="1.4"
-                  >
-                    {slide.subtitle}
-                  </Text>
+                <Heading
+                  as="h2"
+                  fontSize={{ base: "2xl", sm: "3xl", md: "5xl" }}
+                  fontWeight="bold"
+                  color="teal.200"
+                  textTransform="uppercase"
+                  letterSpacing="wide"
+                  lineHeight="1.2"
+                  className="bHead"
+                >
+                  {slide.title}
+                </Heading>
+                <Text
+                  fontSize={{ base: "md", sm: "lg", md: "2xl" }}
+                  fontWeight="normal"
+                  lineHeight="1.4"
+                  maxWidth={{ base: "50%", sm: "60%", md: "100%" }} 
+                  textAlign={{ base: "center", md: "left" }}
+                  px={{ base: 6, sm: 8, md: 0 }} 
+                  mx="auto"
+                >
+                  {slide.subtitle}
+                </Text>
 
-                  <HStack
-                    spacing={{ base: 3, md: 5 }}
-                    mt={6}
-                    justify="flex-start"
-                    flexWrap="wrap"
-                    width="100%"
-                  >
-                    <Link href={slide.link} passHref>
-                      <Button
-                        variant="outline"
-                        color="yellow.400"
-                        borderColor="yellow.400"
-                        px={{ base: 4, md: 6 }}
-                        py={{ base: 2, md: 3 }}
-                        size={{ base: "sm", md: "md", lg: "lg" }}
-                        fontWeight="semibold"
-                        borderRadius="full"
-                        transition="all 0.3s ease"
-                        _hover={{
-                          bg: "yellow.500",
-                          color: "black",
-                          transform: "scale(1.05)",
-                          boxShadow: "lg",
-                        }}
-                      >
-                        Learn More
-                      </Button>
-                    </Link>
-                    <Link href="/contact" passHref>
-                      <Button
-                        colorScheme="yellow"
-                        px={{ base: 4, md: 6 }}
-                        py={{ base: 2, md: 3 }}
-                        size={{ base: "sm", md: "md", lg: "lg" }}
-                        fontWeight="semibold"
-                        borderRadius="full"
-                        transition="all 0.3s ease"
-                        _hover={{
-                          bg: "gray.100",
-                          color: "black",
-                          transform: "scale(1.05)",
-                          boxShadow: "lg",
-                        }}
-                      >
-                        Contact Us
-                      </Button>
-                    </Link>
-                  </HStack>
-                </VStack>
-              </Box>
+
+                <HStack
+                  spacing={{ base: 2, md: 5 }}
+                  mt={4}
+                  justify={{ base: "center", md: "flex-start" }} 
+                  flexWrap="wrap"
+                  width="100%"
+                >
+                  <Link href={slide.link} passHref>
+                    <Button
+                      variant="outline"
+                      color="yellow.400"
+                      borderColor="yellow.400"
+                      px={{ base: 4, md: 6 }}
+                      py={{ base: 2, md: 3 }}
+                      size={{ base: "sm", md: "md", lg: "lg" }}
+                      fontWeight="semibold"
+                      borderRadius="full"
+                      _hover={{
+                        bg: "yellow.500",
+                        color: "black",
+                        transform: "scale(1.05)",
+                      }}
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
+                  <Link href="/contact" passHref>
+                    <Button
+                      colorScheme="yellow"
+                      px={{ base: 4, md: 6 }}
+                      py={{ base: 2, md: 3 }}
+                      size={{ base: "sm", md: "md", lg: "lg" }}
+                      fontWeight="semibold"
+                      borderRadius="full"
+                      _hover={{
+                        bg: "gray.100",
+                        color: "black",
+                        transform: "scale(1.05)",
+                      }}
+                    >
+                      Contact Us
+                    </Button>
+                  </Link>
+                </HStack>
+              </VStack>
+            </Box>
+
             </Box>
           </SwiperSlide>
         ))}

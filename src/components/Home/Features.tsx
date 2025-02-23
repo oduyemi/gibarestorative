@@ -10,7 +10,7 @@ export const Features: React.FC = () => {
       description:
         "It is time to stop struggling to achieve your weight loss goals. At GIBA Medical Clinic, we understand your struggle. That's why we provide personalized care and professional guidance. We offer long-term and sustainable medical weight loss plans.",
       image: "/assets/images/weight.jpg",
-      link:"/weight-loss"
+      link:"/weightloss"
     },
     {
       title: "Hormone Optimization",
