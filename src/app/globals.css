@@ -342,6 +342,97 @@ hr {
   width: 100%;
 } */
 
+/* Booking */
+.panel{
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  border: none;
+  box-shadow: 0 .3rem .8rem rgba(0, 0, 0, .12);
+}
+.panel .panel-heading{
+  background: #fff;
+  padding: 25px 25px 10px;
+  border-radius: 0;
+}
+.panel .panel-heading .title{
+  color: #32393f;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin: 0;
+}
+.panel .panel-heading .btn{
+  font-size: 15px;
+  padding: 6px 15px;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.3s ease 0s;
+}
+.panel .panel-heading .btn:hover{ box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+.panel .panel-body{ border-radius: 0; }
+.panel .panel-body .table thead tr th{
+  color: #333;
+  font-size: 19px;
+  font-weight: 400;
+  padding: 12px;
+}
+.panel .panel-body .table thead tr th:last-child{ width: 120px; }
+.panel .panel-body .table tbody tr td{
+  color: #555;
+  background: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px;
+  vertical-align: middle;
+  border-color: #e7e7e7;
+}
+.panel .panel-body .table .user_icon{
+  width: 50px;
+  height: 50px;
+  margin: 0 5px 0 0;
+  border-radius: 100px;
+  display: inline-block;
+}
+.panel .panel-body .table .user_icon img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.panel .panel-body .table tbody td span.label{ font-size: 13px; }
+.panel .panel-body .table tbody .action-list{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.panel .panel-body .table tbody .action-list li{
+  margin: 0 3px;
+  display: inline-block;
+}
+.panel .panel-body .table tbody .action-list li a{
+  color: #f41127;
+  background-color: rgb(244 17 39 / 0.11);
+  font-size: 18px;
+  border: none;
+  transition: all 0.3s ease;
+}
+.panel .panel-body .table tbody .action-list li:last-child a{
+  color: #0d6efd;
+  background-color: rgb(13 110 253 / 0.11);
+}
+.panel .panel-body .table tbody .action-list li a:hover{ box-shadow: 0 0 5px rgba(0,0,0,0.3); }
+.panel .panel-footer{
+  background-color: #fff;
+  padding: 10px 25px 25px;
+  border: none;
+}
+
+@media only screen and (max-width:767px){
+  .panel .panel-heading{ text-align: center; }
+  .panel .panel-heading .title{ margin: 0 0 15px; }
+  .panel .panel-heading .text-right{ text-align: center; }
+}
+
 
 
 
