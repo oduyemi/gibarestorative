@@ -1,8 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { AboutBanner } from "@/components/About/Banner";
 import { AboutIntro } from "@/components/About/Intro";
-import { Board } from "@/components/Home/Board";
-import { MailingListPrompt } from "@/components/MailinListPrompt";
 import { Ceo } from "@/components/About/Ceo";
 import { Schedule } from "@/components/ScheduleCTA";
 

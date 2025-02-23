@@ -39,7 +39,11 @@ export const VirtualIntro = () => {
               maxWidth="700px"
               mx="auto"
             >
-              Our Virtual Visit service provides convenient access to expert healthcare from the comfort of your home. With secure video consultations, you can connect with our specialists to receive personalized care and medical advice.
+              Our Virtual Visit service provides convenient 
+              access to expert healthcare from the comfort 
+              of your home. With secure video consultations, 
+              you can connect with our specialists to receive 
+              personalized care and medical advice.
             </Text>
 
             <Text
@@ -50,7 +54,10 @@ export const VirtualIntro = () => {
               maxWidth="700px"
               mx="auto"
             >
-              Whether you need follow-up consultations, prescription refills, or medical guidance, our virtual care platform ensures seamless and timely assistance tailored to your needs.
+              Whether you need follow-up consultations, 
+              prescription refills, or medical guidance, 
+              our virtual care platform ensures seamless 
+              and timely assistance tailored to your needs.
             </Text>
 
             <Text
@@ -61,7 +68,9 @@ export const VirtualIntro = () => {
               maxWidth="700px"
               mx="auto"
             >
-              Experience hassle-free healthcare with GIBA's Virtual Visit—bringing quality medical expertise to your doorstep.
+              Experience hassle-free healthcare with 
+              GIBA&apos;s Virtual Visit—bringing quality 
+              medical expertise to your doorstep.
             </Text>
 
             {/* Features Section */}
@@ -83,7 +92,8 @@ export const VirtualIntro = () => {
                 </Box>
                 <Box>
                   <Text fontWeight="semibold" color="gray.600" textAlign="left">
-                    Secure and private virtual consultations with experienced healthcare providers.
+                    Secure and private virtual consultations 
+                    with experienced healthcare providers.
                   </Text>
                 </Box>
               </Flex>
