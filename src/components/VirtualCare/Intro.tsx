@@ -19,7 +19,7 @@ export const VirtualIntro = () => {
           {/* Image Section */}
           <GridItem>
             <Image
-              src="/assets/images/vcare1.jpeg"
+              src="/assets/images/providerconnect.png"
               alt="Virtual Consultation"
               h={{ base: "300px", md: "450px" }}
               borderRadius="xl"
