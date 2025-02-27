@@ -51,10 +51,10 @@ export const PrivacyPolicy: React.FC = () => {
               <strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.
             </ListItem>
             <ListItem>
-              <strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest, or other securities entitled to vote for election of directors or other managing authority.
+              <strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where &apos;control&apos; means ownership of 50% or more of the shares, equity interest, or other securities entitled to vote for election of directors or other managing authority.
             </ListItem>
             <ListItem>
-              <strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to GIBA Medical Clinic, 4201 Cypress creek Pkwy Ste 540 Houston, Texas 77068.
+              <strong>Company</strong> (referred to as either &apos;the Company&apos;, &apos;We&apos;, &apos;Us&apos; or &apos;Our&apos; in this Agreement) refers to GIBA Medical Clinic, 4201 Cypress creek Pkwy Ste 540 Houston, Texas 77068.
             </ListItem>
             <ListItem>
               <strong>Cookies</strong> are small files that are placed on Your computer, mobile device, or any other device by a website, containing the details of Your browsing history on that website among its many uses.
@@ -134,7 +134,7 @@ export const PrivacyPolicy: React.FC = () => {
             </ListItem>
           </UnorderedList>
           <Text fontSize="lg" mb={4}>
-            Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser.
+            Cookies can be &apos;Persistent&apos; or &apos;Session&apos; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser.
           </Text>
         </Box>
 
