@@ -81,11 +81,9 @@ export const Schedule = () => {
                   whileHover={{ scale: 1.1, transition: { duration: 0.3 } }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <Link href="/bookings" passHref>
-                    <Button colorScheme="yellow" size="lg" px={8} borderRadius="full">
-                      Book Now
-                    </Button>
-                  </Link>
+                  <Button colorScheme="yellow" size="lg" px={8} borderRadius="full" onClick={() => window.location.href = "/bookings"}>
+                    Book Now
+                  </Button>
                 </motion.div>
               </VStack>
             </Box>

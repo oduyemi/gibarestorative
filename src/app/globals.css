@@ -71,25 +71,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
-/* p {
-  margin-top: 0;
-  margin-bottom: 1rem; } */
-
-.navbar,
-.text-light {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
 
 .container {
   margin: 0 !important;
   padding: 0 !important;
 }
 
-address {
-  margin-bottom: 1rem;
-  font-style: normal;
-  line-height: inherit; }
 
 ol,
 ul,
@@ -335,12 +322,6 @@ hr {
   margin-top: -2% !important;
 }
 
-/* .top {
-  position: fixed;
-  top: 0px;
-  z-index: 5000;
-  width: 100%;
-} */
 
 /* Booking */
 .panel{
@@ -437,21 +418,15 @@ hr {
 
 
 @media  (max-width: 768px) {
-  .top {
-    position: relative !important;
-    top: 0px;
-    z-index: 5000;
-    width: 100%;
-  }
-  .b{
+  /* .b{
     width: 44% !important;
     position: relative !important;
     left: 26% !important;
-  }
+  } */
   .space {
     margin: 10px !important;
   }
-  .bHead {
+  /* .bHead {
     font-size: large !important;
   }
   .dHead{
@@ -462,10 +437,6 @@ hr {
     width: 30% !important;
     padding-left: -17% !important;
     padding-right: -12% !important;
-  }
- 
-  .slide{
-    background-size: contain !important;
-  }
+  } */
   
 }

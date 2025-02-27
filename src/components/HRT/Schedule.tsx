@@ -47,19 +47,18 @@ export const HRTSchedule = () => {
                 (BHRT) is a reliable and efficient method 
                 for addressing hormone imbalances.
               </Heading>
-              <Link href="/bookings" passHref>
                 <Button
                   as="a"
                   colorScheme="yellow"
                   size="lg"
                   px={8}
                   borderRadius="full"
+                  onClick={() => window.location.href = "/bookings"}
                   _hover={{ bg: "yellow.500" }}
                   transition="all 0.3s ease"
                 >
                   Book Now
                 </Button>
-              </Link>
             </Flex>
           </Box>
         </Box>

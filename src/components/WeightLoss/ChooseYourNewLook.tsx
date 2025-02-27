@@ -68,18 +68,17 @@ export const ChooseYourNewLook = () => {
                       <Text color="gray.600" fontSize="sm">Invest in your health for just <b>$299/month</b>.</Text>
                     </Box>
                   </Flex>
-                  <Link href="/bookings">
                     <Button
                       mt={4}
                       size="md"
                       colorScheme="yellow"
                       borderRadius="full"
                       w="full"
+                      onClick={() => window.location.href = "/bookings"}
                       _hover={{ bg: "yellow.500", transform: "scale(1.05)" }}
                     >
                       Start Now
                     </Button>
-                  </Link>
                 </CardBody>
               </Card>
 
@@ -104,18 +103,17 @@ export const ChooseYourNewLook = () => {
                       <Text color="gray.600" fontSize="sm">Invest in your health for just <b>$299/month</b>.</Text>
                     </Box>
                   </Flex>
-                  <Link href="/bookings">
                     <Button
                       mt={4}
                       size="md"
                       colorScheme="yellow"
                       borderRadius="full"
                       w="full"
+                      onClick={() => window.location.href = "/bookings"}
                       _hover={{ bg: "yellow.500", transform: "scale(1.05)" }}
                     >
                       Start Now
                     </Button>
-                  </Link>
                 </CardBody>
               </Card>
             </Grid>

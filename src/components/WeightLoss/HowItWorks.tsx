@@ -20,19 +20,18 @@ export const HowItWorks: React.FC = () => {
         </Flex>
       </Box>
         <Box className="mx-auto text-center mt-3">
-            <Link href="/bookings" passHref>
-                <Button
-                    as="a"
-                    colorScheme="yellow"
-                    size="lg"
-                    px={8}
-                    borderRadius="full"
-                    _hover={{ bg: "yellow.500" }}
-                    transition="all 0.3s ease"
-                >
-                    Book Now
-                </Button>
-            </Link>
+          <Button
+              as="a"
+              colorScheme="yellow"
+              size="lg"
+              px={8}
+              borderRadius="full"
+              onClick={() => window.location.href = "/bookings"}
+              _hover={{ bg: "yellow.500" }}
+              transition="all 0.3s ease"
+          >
+              Book Now
+          </Button>
         </Box>
     </Box>
   );

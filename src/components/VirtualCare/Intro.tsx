@@ -128,7 +128,8 @@ export const VirtualIntro = () => {
               colorScheme="yellow"
               borderRadius="full"
               px={8}
-              _hover={{ bg: "blue.500", transform: "scale(1.05)" }}
+              onClick={() => window.location.href = "/bookings"}
+              _hover={{ bg: "yellow.500", transform: "scale(1.05)" }}
               transition="all 0.3s ease"
               display="block"
               mx="auto"

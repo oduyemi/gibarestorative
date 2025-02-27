@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <Box as="nav" bg="white" shadow="md" py={4} px={6} position="sticky" top={0} zIndex={2000}>
+    <Box as="nav" bg="white" shadow="md" py={4} px={{ base: 4, lg: 6 }} position="sticky" top={0} zIndex={2000}>
       <Flex justify="space-between" align="center">
         
         {/* Logo */}
@@ -23,12 +23,13 @@ export const Header: React.FC = () => {
           <Image 
             src="/assets/images/logo/sitelogo.png" 
             alt="Logo" 
-            width={100} 
-            height={40} 
+            width={120} 
+            height={48} 
             className="object-cover"
             style={{
-              marginTop: "-20%",
-              marginBottom: "-20%"
+              marginTop: "-10%", 
+              marginBottom: "-10%",
+              transition: "all 0.3s ease-in-out",
             }}
           />
         </Link>
@@ -48,7 +49,7 @@ export const Header: React.FC = () => {
           as="ul" 
           listStyleType="none" 
           align="center" 
-          gap={6} 
+          gap={8} 
           display={{ base: "none", lg: "flex" }}
         >
           <li>
@@ -59,12 +60,13 @@ export const Header: React.FC = () => {
             </Link>
           </li>
           <li>
-          <Link href="/about">
+            <Link href="/about">
               <Text fontSize="lg" _hover={{ color: "#008B8B" }} cursor="pointer">
                 About
               </Text>
             </Link>
           </li>
+
           {/* Services Dropdown */}
           <Menu>
             <MenuButton 
@@ -78,11 +80,11 @@ export const Header: React.FC = () => {
               <Text fontSize="lg" fontWeight="normal">Services</Text>
             </MenuButton>
             <MenuList bg="white" shadow="lg" borderRadius="md">
-              {[
-                { label: "Direct Primary Care", link: "/care" },
+              {[ 
+                { label: "Weight Loss Program", link: "/weightloss" },
                 { label: "Hormone Replacement Therapy", link: "/hormone-replacement" },
                 { label: "Virtual Visits", link: "/virtual-care" },
-                { label: "Weight Loss Program", link: "/weightloss" }
+                { label: "Direct Primary Care", link: "/care" }
               ].map((service, idx) => (
                 <MenuItem 
                   as={Link} 
@@ -131,8 +133,8 @@ export const Header: React.FC = () => {
               alignSelf="flex-end"
             />
             <Link href="/" onClick={toggleMobileMenu}>
-                <Text fontSize="lg" _hover={{ color: "#008B8B" }}>Home</Text>
-              </Link>
+              <Text fontSize="lg" _hover={{ color: "#008B8B" }}>Home</Text>
+            </Link>
             {["About", "Membership", "Bookings", "Contact"].map((item, index) => (
               <Link key={index} href={`/${item.toLowerCase()}`} onClick={toggleMobileMenu}>
                 <Text fontSize="lg" _hover={{ color: "#008B8B" }}>{item}</Text>
@@ -143,11 +145,11 @@ export const Header: React.FC = () => {
             <Box>
               <Text fontSize="lg" fontWeight="bold" color="gray.600">Services</Text>
               <VStack align="start" pl={4} spacing={3}>
-                {[
-                  { label: "Direct Primary Care", link: "/care" },
+                {[ 
+                  { label: "Weight Loss Program", link: "/weightloss" },
                   { label: "Hormone Replacement Therapy", link: "/hormone-replacement" },
                   { label: "Virtual Visits", link: "/virtual-care" },
-                  { label: "Weight Loss Program", link: "/weightloss" }
+                  { label: "Direct Primary Care", link: "/care" },
                 ].map((service, idx) => (
                   <Link key={idx} href={service.link} onClick={toggleMobileMenu}>
                     <Text fontSize="md" _hover={{ color: "#008B8B" }}>

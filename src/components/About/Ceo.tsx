@@ -8,7 +8,7 @@ export const Ceo: React.FC = () => {
 
   return (
     <Box py={10} bgGradient="linear(to-r, gray.50, white)">
-      <Flex direction="column" align="center" maxW="6xl" mx="auto" px={4}>
+      <Flex direction="column" align="center" maxW="7xl" mx="auto" px={4}>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -30,12 +30,12 @@ export const Ceo: React.FC = () => {
             boxShadow="xl"
             borderRadius="xl"
             overflow="hidden"
-            maxW="4xl"
+            maxW="6xl"
             w="full"
             _hover={{ transform: "scale(1.02)", transition: "0.3s ease-in-out" }}
+            mx="auto"
           >
             <Box
-              className="b"
               bgImage={`url(assets/images/ceo.jpg)`}
               bgPosition="center"
               bgSize="cover"
@@ -74,8 +74,8 @@ export const Ceo: React.FC = () => {
               </HStack>
             </Box>
 
-            <Box p={6} w={{ base: "full", md: "60%" }} className="b">
-              <Heading as="h4" size="md" mb={3} color="teal.600" className="dHead" letterSpacing="wide">
+            <Box p={6} w={{ base: "full", md: "60%" }}>
+              <Heading as="h4" size="md" mb={3} color="teal.600" letterSpacing="wide">
                 Chinyerem Ariole, FNP-C
               </Heading>
               <motion.div
@@ -83,14 +83,14 @@ export const Ceo: React.FC = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 1.2 }}
               >
-                <Text fontSize="md" color="gray.600" lineHeight="1.8" className="dHead" textAlign="justify">
+                <Text fontSize="md" color="gray.600" lineHeight="1.8" textAlign="justify">
                   Chinyerem Ariole is a board-certified Family Nurse Practitioner with over five years of
                   experience as a provider and 17 years of nursing experience. Areas of expertise encompass
                   Urgent Care, Family Medicine, Chronic Care, Correctional Medicine, Weight Loss, and
-                  women&apos;s health.
+                  women's health.
                   <br /><br />
                   She provides virtual consultations on services such as allergy, birth control, STD
-                  management, weight loss, women&apos;s health, hormone therapy, prescription refills, chronic
+                  management, weight loss, women's health, hormone therapy, prescription refills, chronic
                   disease, COVID-19 visits, and consultations for UTIs, ED, premature ejaculation, vaginal
                   infections, and yeast infections.
                   <br /><br />

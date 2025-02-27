@@ -20,7 +20,6 @@ export const HowMembershipWorks: React.FC = () => {
         </Flex>
       </Box>
         <Box className="mx-auto text-center mt-3">
-            <Link href="/bookings" passHref>
                 <Button
                     as="a"
                     colorScheme="yellow"
@@ -29,10 +28,10 @@ export const HowMembershipWorks: React.FC = () => {
                     borderRadius="full"
                     _hover={{ bg: "yellow.500" }}
                     transition="all 0.3s ease"
+                    onClick={() => window.location.href = "/bookings"}
                 >
                     Book Now
                 </Button>
-            </Link>
         </Box>
     </Box>
   );

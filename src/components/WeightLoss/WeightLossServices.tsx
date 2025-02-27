@@ -92,7 +92,6 @@ export const WeightLossServices = () => {
             <Text color="gray.700" mb={6} fontSize={{ base: "md", md: "lg" }} fontWeight="medium">
               {service.description}
             </Text>
-            <Link href={service.link} passHref>
               <Button
                 as="a"
                 colorScheme="yellow"
@@ -101,6 +100,7 @@ export const WeightLossServices = () => {
                 borderRadius="full"
                 fontWeight="bold"
                 boxShadow="md"
+                onClick={() => window.location.href = service.link}
                 _hover={{
                   bg: "yellow.500",
                   transform: "scale(1.05)",
@@ -111,7 +111,6 @@ export const WeightLossServices = () => {
               >
                 Learn More
               </Button>
-            </Link>
           </Box>
         </Flex>
       ))}

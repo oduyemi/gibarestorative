@@ -137,6 +137,7 @@ export const HRTIntro = () => {
               colorScheme="yellow"
               borderRadius="full"
               px={8}
+              onClick={() => window.location.href = "/bookings"}
               _hover={{ bg: "yellow.500", transform: "scale(1.05)" }}
               transition="all 0.3s ease"
               display="block"

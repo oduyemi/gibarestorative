@@ -13,8 +13,8 @@ import { FaRegHeart, FaUsers } from "react-icons/fa";
 
 export const PrimaryIntro = () => {
   return (
-    <Box py={{ base: 5, md: 10 }}>
-      <Box maxW="7xl" mx="auto" px={6}>
+    <Box py={{ base: 6, md: 12 }} bg="gray.50">
+      <Box maxW="7xl" mx="auto" px={{ base: 6, md: 8 }}>
         <Grid templateColumns={{ base: "1fr", md: "5fr 7fr" }} gap={10} alignItems="center">
           {/* Image Section */}
           <GridItem>
@@ -115,13 +115,14 @@ export const PrimaryIntro = () => {
             <Button
               mt={8}
               size="lg"
-              colorScheme="blue"
+              colorScheme="yellow"
               borderRadius="full"
               px={8}
-              _hover={{ bg: "blue.500", transform: "scale(1.05)" }}
+              _hover={{ bg: "yellow.500", transform: "scale(1.05)" }}
               transition="all 0.3s ease"
               display="block"
               mx="auto"
+              onClick={() => window.location.href = "/bookings"}
             >
               Schedule a Consultation
             </Button>
