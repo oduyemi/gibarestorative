@@ -20,7 +20,8 @@ export const Address = () => {
       </Heading>
 
       <Text fontSize={{ base: 'sm', md: 'md' }} color="gray.600" textAlign="center">
-        Visit us at 24301 Brazos Town Crossing, Rosenberg, Texas 77471, United States
+        Visit us at 4201 Cypress creek Pkwy 
+        Ste 540 Houston, Texas 77068 United States
       </Text>
 
       <Box
@@ -40,7 +41,7 @@ export const Address = () => {
       >
         {/* Embedded map iframe */}
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3471.1197195751397!2d-95.75266992460004!3d29.542007642201337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86411d9616a36915%3A0xc3d94f38dcab7e71!2s24301%20Brazos%20Town%20Crossing%2C%20Rosenberg%2C%20TX%2074741%2C%20USA!5e0!3m2!1sen!2snl!4v1738398254821!5m2!1sen!2snl"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.6227652879566!2d-95.49581002458451!3d29.990269521135772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640cc6429365375%3A0xf646a874cfd5c205!2s4201%20Cypress%20Creek%20Pkwy%2C%20Houston%2C%20TX%2077068%2C%20USA!5e0!3m2!1sen!2snl!4v1740663369714!5m2!1sen!2snl"
           width="100%"
           height={useBreakpointValue({ base: '300', md: '400' })}
           style={{
