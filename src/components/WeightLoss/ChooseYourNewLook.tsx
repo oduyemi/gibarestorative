@@ -12,7 +12,6 @@ import {
   Card,
   CardBody,
 } from "@chakra-ui/react";
-import Link from "next/link";
 import { FaCog, FaFire } from "react-icons/fa";
 
 export const ChooseYourNewLook = () => {
