@@ -93,7 +93,7 @@ export const AboutIntro = () => {
               </Text>
 
               {/* Service Areas Section */}
-              <Heading as="h3" size="lg" color="gray.700" mb={4}>
+              <Heading as="h3" size="lg" color="teal.600" mb={4}>
                 Service Areas
               </Heading>
               <Stack

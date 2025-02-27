@@ -1,5 +1,5 @@
 "use client";
-import { Box, Text, Heading, Flex, Button, VStack } from "@chakra-ui/react";
+import { Box, Text, Heading, Flex, Stack, Button, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -55,6 +55,53 @@ export const Intro: React.FC = () => {
                 of <b>mind, body, and spirit</b>. Our <b>integrative approach</b> blends <b>modern medical advancements</b> 
                 with <b>holistic therapies</b> to create lasting vitality.
               </Text>
+              <Heading as="h3" size="lg" color="teal.600" mb={4}>
+          Service Areas
+        </Heading>
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          spacing={8}
+          align="center"
+          justify="center"
+        >
+          {["Texas", "Vermont", "Arizona", "Delaware"].map((area) => (
+            <motion.div
+              key={area}
+              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              transition={{
+                duration: 0.5,
+                delay: 0.3,
+                type: "spring",
+                stiffness: 100,
+              }}
+              viewport={{ once: true }}
+            >
+              <Box
+                bg="white"
+                px={6}
+                py={4}
+                borderRadius="lg"
+                boxShadow="lg"
+                _hover={{
+                  bg: "teal.50",
+                  boxShadow: "xl",
+                  transform: "scale(1.05)",
+                }}
+                transition="transform 0.3s ease, box-shadow 0.3s ease"
+              >
+                <Text
+                  fontSize="md"
+                  fontWeight="bold"
+                  color="teal.500"
+                  textAlign="center"
+                >
+                  {area}
+                </Text>
+              </Box>
+            </motion.div>
+          ))}
+        </Stack>
             </VStack>
 
             {/* Call-to-Action Button */}
