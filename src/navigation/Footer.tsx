@@ -95,7 +95,7 @@ export const Footer = () => {
         <Box mt={8} borderTop="1px" borderColor="gray.600" pt={6}>
           <Flex direction={{ base: "column", md: "row" }} justify="space-between" align="center">
             <Text fontSize="sm" opacity={0.7} color="gray.700">
-              &copy; {new Date().getFullYear()} Giba Restorative LTD | All rights reserved
+              &copy; {new Date().getFullYear()} Giba Medical Clinic | All rights reserved
             </Text>
             <Stack direction="row" spacing={6} fontSize="sm">
               <Link href="" color="teal.500" _hover={{ textDecoration: "underline", color: "teal.600" }}>Terms</Link>
