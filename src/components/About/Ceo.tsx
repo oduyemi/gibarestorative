@@ -61,10 +61,10 @@ export const Ceo: React.FC = () => {
                   >
                     <IconButton
                       as="a"
-                      href="#"
+                      href=""
                       icon={<Icon />}
                       aria-label="Social Media Link"
-                      colorScheme="yellow"
+                      colorScheme="teal"
                       variant="ghost"
                       size="lg"
                       _hover={{ transform: "scale(1.2)", transition: "0.3s" }}
