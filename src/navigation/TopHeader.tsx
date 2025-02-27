@@ -23,7 +23,7 @@ export const TopHeader: React.FC = () => {
         as="div"
         display="flex"
         alignItems="center"
-        justify="space-between"
+        justifyContent="space-between"
         color="white"
         maxW="container.xl"
         mx="auto"
