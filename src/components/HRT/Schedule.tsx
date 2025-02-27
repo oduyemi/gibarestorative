@@ -1,6 +1,5 @@
 "use client";
 import { Box, Heading, Button, Flex } from "@chakra-ui/react";
-import Link from "next/link";
 
 export const HRTSchedule = () => {
   return (

@@ -87,10 +87,10 @@ export const Ceo: React.FC = () => {
                   Chinyerem Ariole is a board-certified Family Nurse Practitioner with over five years of
                   experience as a provider and 17 years of nursing experience. Areas of expertise encompass
                   Urgent Care, Family Medicine, Chronic Care, Correctional Medicine, Weight Loss, and
-                  women's health.
+                  women&apos;s health.
                   <br /><br />
                   She provides virtual consultations on services such as allergy, birth control, STD
-                  management, weight loss, women's health, hormone therapy, prescription refills, chronic
+                  management, weight loss, women&apos;s health, hormone therapy, prescription refills, chronic
                   disease, COVID-19 visits, and consultations for UTIs, ED, premature ejaculation, vaginal
                   infections, and yeast infections.
                   <br /><br />

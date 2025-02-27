@@ -1,5 +1,5 @@
 "use client";
-import { Box, Heading, Grid, GridItem, Text, Button } from "@chakra-ui/react";
+import { Box, Heading, Grid, GridItem, Text } from "@chakra-ui/react";
 import { FaPersonBooth, FaNotesMedical } from "react-icons/fa";
 import { BenefitCard } from "../BenefitCard"; 
 

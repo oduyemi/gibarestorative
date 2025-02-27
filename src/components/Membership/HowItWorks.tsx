@@ -1,5 +1,5 @@
 "use client";
-import { Box, Heading, SimpleGrid, Button, Text, Icon } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid, Button } from "@chakra-ui/react";
 import { StepCard } from "../StepCard";
 import { BsSearch, BsCartPlus } from "react-icons/bs";
 
