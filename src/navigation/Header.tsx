@@ -118,7 +118,8 @@ export const Header: React.FC = () => {
           left="0" 
           width="70%" 
           height="100vh" 
-          bg="white" 
+          bg="teal.500" 
+          color="white"
           shadow="lg" 
           py={6} 
           px={6} 
@@ -143,7 +144,7 @@ export const Header: React.FC = () => {
 
             {/* Services Dropdown for Mobile */}
             <Box>
-              <Text fontSize="lg" fontWeight="bold" color="gray.600">Services</Text>
+              <Text fontSize="lg" fontWeight="bold" color="gray.200">Services</Text>
               <VStack align="start" pl={4} spacing={3}>
                 {[ 
                   { label: "Weight Loss Program", link: "/weightloss" },
