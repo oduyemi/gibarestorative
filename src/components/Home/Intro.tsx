@@ -51,9 +51,9 @@ export const Intro: React.FC = () => {
                 GIBA is more than just a clinic – It&apos;s a sanctuary for healing, restoration, and transformation.
               </Text>
               <Text fontSize={{ base: "md", md: "lg" }} color="gray.600" maxW="600px">
-                We believe that true health is not just the absence of disease but a <b>harmonious balance</b> 
-                of <b>mind, body, and spirit</b>. Our <b>integrative approach</b> blends <b>modern medical advancements</b> 
-                with <b>holistic therapies</b> to create lasting vitality.
+                We believe that true health is not just the absence of disease but a harmonious balance 
+                of mind, body, and spirit. Our integrative approach blends modern medical advancements 
+                with holistic therapies to create lasting vitality.
               </Text>
               <Heading as="h3" size="lg" color="teal.600" mb={4}>
           Service Areas
