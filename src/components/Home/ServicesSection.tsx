@@ -10,7 +10,7 @@ export const ServicesSection: React.FC = () => {
       icon: FaWeight, 
       title: "Weight Loss Program", 
       description: "Schedule your free consultation with one of our providers now to learn more and ask questions.",
-      link: "/weight-loss"
+      link: "/weightloss"
     },
     { 
       icon: FaUserMd, 
@@ -22,13 +22,13 @@ export const ServicesSection: React.FC = () => {
       icon: FaLaptopMedical, 
       title: "Virtual Visits", 
       description: "Get started right away at your own pace with a course that suits you, including a community of like-minded women.",
-      link:"/virtual-visits" 
+      link:"/virtualcare" 
     },
     { 
       icon: FaHeartbeat, 
       title: "Direct Patient Care", 
       description: "We will personalize your care. This includes weekly dosing of medication, diet, and exercise plan.",
-      link:"/patient-care" 
+      link:"/care" 
     },
   ];
 
