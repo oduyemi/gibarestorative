@@ -71,7 +71,7 @@ export const PrimaryIntro = () => {
                 <Box
                   w={12}
                   h={12}
-                  bg="blue.100"
+                  bg="teal.100"
                   display="flex"
                   alignItems="center"
                   justifyContent="center"
@@ -79,7 +79,7 @@ export const PrimaryIntro = () => {
                   mr={4}
                   boxShadow="lg"
                 >
-                  <Icon as={FaRegHeart} color="blue.500" boxSize={{ base: 5, md: 6 }} />
+                  <Icon as={FaRegHeart} color="teal.500" boxSize={{ base: 5, md: 6 }} />
                 </Box>
                 <Box>
                   <Text fontWeight="semibold" color="gray.600" textAlign="left">

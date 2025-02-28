@@ -40,7 +40,7 @@ const steps = [
   {
     title: "Free Consultation",
     icon: BsSearch,
-    bgColor: "blue.500",
+    bgColor: "teal.500",
     description:
       "Request a free (10min) virtual consultation. We'll explain our weight loss program, assess your fit, and order labs to ensure safety. Afterward, we'll schedule your initial visit and send intake forms.",
   },

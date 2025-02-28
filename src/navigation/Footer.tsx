@@ -29,7 +29,7 @@ export const Footer = () => {
             <Button
               size="lg"
               bg="yellow.400"
-              color="blue.700"
+              color="yellow.700"
               _hover={{ bg: "yellow.500" }}
               transition="all 0.3s ease"
               borderRadius="md"

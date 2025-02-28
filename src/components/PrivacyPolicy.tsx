@@ -79,7 +79,7 @@ export const PrivacyPolicy: React.FC = () => {
             </ListItem>
             <ListItem>
               <strong>Website</strong> refers to Giba Medical Clinic, accessible from{" "}
-              <Link href="https://gibarestorative.com/" isExternal color="blue.500">
+              <Link href="https://gibarestorative.com/" isExternal color="teal.500">
                 https://gibarestorative.com/
               </Link>
             </ListItem>

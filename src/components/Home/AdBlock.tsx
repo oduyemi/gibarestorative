@@ -61,7 +61,7 @@ export const AdBlock: React.FC = () => {
               fontWeight="bold"
               borderRadius="full"
               boxShadow="xl"
-              _hover={{ bg: "blue.500", color: "white", transform: "scale(1.05)" }}
+              _hover={{ bg: "yellow.500", color: "white", transform: "scale(1.05)" }}
               _active={{ transform: "scale(0.98)" }}
               transition="all 0.3s ease"
             >

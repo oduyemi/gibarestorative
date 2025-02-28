@@ -41,7 +41,7 @@ const steps = [
   {
     title: "Apply For Free",
     icon: BsSearch,
-    bgColor: "blue.500",
+    bgColor: "teal.500",
     description:
       "Complete the online application. It takes only a few minutes to complete. Our healthcare provider will review your information.",
   },

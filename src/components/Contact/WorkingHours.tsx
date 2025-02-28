@@ -25,7 +25,7 @@ export const WorkingHours = () => {
             <Box 
               key={entry.day} 
               p={4} 
-              _hover={{ bg: "blue.50" }} 
+              _hover={{ bg: "teal.50" }} 
               bg={index % 2 === 0 ? "gray.100" : "white"}
               transition="background-color 0.2s ease"
             >

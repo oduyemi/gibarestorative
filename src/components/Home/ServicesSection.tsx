@@ -22,7 +22,7 @@ export const ServicesSection: React.FC = () => {
       icon: FaLaptopMedical, 
       title: "Virtual Visits", 
       description: "Get started right away at your own pace with a course that suits you, including a community of like-minded women.",
-      link:"/virtualcare" 
+      link:"/virtual-care" 
     },
     { 
       icon: FaHeartbeat, 
@@ -33,7 +33,7 @@ export const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <Box as="section" py={{ base: 12, md: 20 }} bgGradient="linear(to-r, blue.50, white)">
+    <Box as="section" py={{ base: 12, md: 20 }} bgGradient="linear(to-r, teal.50, white)">
       <Box maxW="6xl" mx="auto" textAlign="center" px={6}>
         {/* Section Title */}
         <Box mb={12}>
@@ -112,7 +112,7 @@ export const ServicesSection: React.FC = () => {
                       borderRadius="full"
                       transition="all 0.3s ease"
                       _hover={{
-                        bgGradient: "linear(to-r, blue.600, blue.700)",
+                        bgGradient: "linear(to-r, yellow.600, yellow.700)",
                         color: "white",
                         transform: "scale(1.05)",
                         boxShadow: "xl",
