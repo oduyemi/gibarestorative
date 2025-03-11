@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Text } from "@chakra-ui/react";
+import Link from "next/link";
 
 export const Appointments: React.FC = () => {
   return (
@@ -9,13 +10,9 @@ export const Appointments: React.FC = () => {
 
       {/* Embed the page using iframe */}
       <Box mt={6} borderWidth="1px" borderRadius="lg" overflow="hidden">
-        <iframe
-          src="https://intakeq.com/signin"
-          width="100%"
-          height="600px"
-          style={{ border: "none" }}
-          title="IntakeQ Sign In"
-        />
+        <Link href="https://intakeq.com/signin" target="_blank" rel="noopener noreferrer">
+          <Text color="teal.800">Go to IntakeQ Sign In</Text>
+        </Link>
       </Box>
     </Box>
   );
