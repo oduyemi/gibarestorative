@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React from "react";
 import { 
     Box, 
@@ -45,8 +45,9 @@ export const Sidebar: React.FC = () => {
             >
                 <Text fontSize="lg" fontWeight="bold" mb={5}>Dashboard</Text>
                 <VStack align="stretch" spacing={4}>
-                    {menuItems.map((item) => (
+                    {menuItems.map((item, index) => (
                         <Link 
+                            key={index}  // Add key prop here
                             href={item.link} 
                             display="flex" 
                             alignItems="center" 
@@ -68,8 +69,9 @@ export const Sidebar: React.FC = () => {
                     <DrawerHeader>Menu</DrawerHeader>
                     <DrawerBody>
                         <VStack align="stretch" spacing={4}>
-                            {menuItems.map((item) => (
+                            {menuItems.map((item, index) => (
                                 <Link 
+                                    key={index}  // Add key prop here
                                     href={item.link} 
                                     onClick={onClose} 
                                     display="flex" 
@@ -90,12 +92,10 @@ export const Sidebar: React.FC = () => {
     );
 };
 
-
 const menuItems = [
     { label: "Dashboard", icon: FiHome, link: "/admin" },
     { label: "Patients", icon: FiUser, link: "/admin/patients" },
     { label: "Mailing List", icon: FiMail, link: "/admin/email-center" },
-    // { label: "Appointments", icon: FiCalendar, link: "/admin/appointments" },
     { label: "Profile", icon: FiUser, link: "/admin/profile" },
     { label: "Settings", icon: FiSettings, link: "/admin/settings" }
 ];
