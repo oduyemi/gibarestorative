@@ -12,14 +12,11 @@ import { Footer } from "@/navigation/Footer";
 
 export default function RootLayout({
   children,
+  hideLayout = false,  
 }: {
   children: React.ReactNode;
+  hideLayout?: boolean;  
 }) {
-  const pathname = usePathname(); // Get the current route
-
-  // Check if the route is under /admin
-  const isAdminRoute = pathname.startsWith("/admin");
-
   return (
     <html lang="en">
       <Head>
@@ -41,27 +38,38 @@ export default function RootLayout({
       <body style={{ margin: 0, padding: 0 }}>
         <ChakraProvider>
           <Box minH="100vh" display="flex" flexDirection="column" m={0} p={0}>
-            {/* Conditionally Render Header */}
-            {!isAdminRoute && (
-              <>
-                <TopHeader />
-                <Header />
-              </>
-            )}
-
-            <Box flex="1" m={0} p={0}>
-              {children}
-            </Box>
-
-            {/* Conditionally Render Footer */}
-            {!isAdminRoute && (
-              <Box className="mt-5">
-                <Footer />
-              </Box>
-            )}
+            {/* Conditionally Render Header and Footer */}
+            {!hideLayout && <ClientSideLayout>{children}</ClientSideLayout>}
+            {hideLayout && children} {/* If hideLayout is true, just render children */}
           </Box>
         </ChakraProvider>
       </body>
     </html>
   );
 }
+
+const ClientSideLayout = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname(); // Now inside a client-side component
+  const isAdminRoute = pathname.startsWith("/admin");
+
+  return (
+    <>
+      {!isAdminRoute && (
+        <>
+          <TopHeader />
+          <Header />
+        </>
+      )}
+
+      <Box flex="1" m={0} p={0}>
+        {children}
+      </Box>
+
+      {!isAdminRoute && (
+        <Box className="mt-5">
+          <Footer />
+        </Box>
+      )}
+    </>
+  );
+};
