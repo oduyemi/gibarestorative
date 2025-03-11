@@ -40,7 +40,7 @@ export const Booking = () => {
                     <Text as="span" bg="teal.100" px={3} py={1} borderRadius="md">{service.duration}</Text>
                   </Td>
                   <Td textAlign="center">
-                    <Button as={Link} href="" colorScheme="yellow" size="sm" borderRadius="full" px={6}>
+                    <Button as={Link} href="https://intakeq.com/#/bookingsettings?tab=widget" colorScheme="yellow" size="sm" borderRadius="full" px={6}>
                       Book Now
                     </Button>
                   </Td>

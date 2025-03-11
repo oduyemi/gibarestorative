@@ -2,6 +2,7 @@
 
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
+import { usePathname } from "next/navigation"; // Import usePathname
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css";
@@ -11,25 +12,28 @@ import { Footer } from "@/navigation/Footer";
 
 export default function RootLayout({
   children,
-  hideLayout = false,
 }: {
   children: React.ReactNode;
-  hideLayout?: boolean;
 }) {
+  const pathname = usePathname(); // Get the current route
+
+  // Check if the route is under /admin
+  const isAdminRoute = pathname.startsWith("/admin");
+
   return (
     <html lang="en">
       <Head>
         <title>Giba Restorative Clinic</title>
         <meta name="description" content="Best Weight Loss Clinic" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         {/* Favicon & Icons */}
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        
+
         {/* Android Icons */}
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
         <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
@@ -38,7 +42,7 @@ export default function RootLayout({
         <ChakraProvider>
           <Box minH="100vh" display="flex" flexDirection="column" m={0} p={0}>
             {/* Conditionally Render Header */}
-            {!hideLayout && (
+            {!isAdminRoute && (
               <>
                 <TopHeader />
                 <Header />
@@ -50,7 +54,7 @@ export default function RootLayout({
             </Box>
 
             {/* Conditionally Render Footer */}
-            {!hideLayout && (
+            {!isAdminRoute && (
               <Box className="mt-5">
                 <Footer />
               </Box>
