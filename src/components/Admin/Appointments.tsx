@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text } from "@chakra-ui/react";
-import Link from "next/link";
+import { IntakeQWidget } from "../IntakeWidget";
 
 export const Appointments: React.FC = () => {
   return (
@@ -10,9 +10,7 @@ export const Appointments: React.FC = () => {
 
       {/* Embed the page using iframe */}
       <Box mt={6} borderWidth="1px" borderRadius="lg" overflow="hidden">
-        <Link href="https://intakeq.com/signin" target="_blank" rel="noopener noreferrer">
-          <Text color="teal.800">Go to IntakeQ Sign In</Text>
-        </Link>
+        <IntakeQWidget />
       </Box>
     </Box>
   );
