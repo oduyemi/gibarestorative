@@ -2,7 +2,7 @@
 
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
-import { usePathname } from "next/navigation"; // Import usePathname
+import { usePathname } from "next/navigation"; 
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "animate.css";
@@ -49,7 +49,7 @@ export default function RootLayout({
 }
 
 const ClientSideLayout = ({ children }: { children: React.ReactNode }) => {
-  const pathname = usePathname(); // Now inside a client-side component
+  const pathname = usePathname(); 
   const isAdminRoute = pathname?.startsWith("/admin") ?? false; // Handle null case
 
   return (
