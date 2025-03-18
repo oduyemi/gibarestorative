@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>Giba Restorative Clinic</title>
+        <title>Best Weight loss plan | Giba Restorative Clinic</title>
         <meta name="description" content="Best Weight Loss Clinic" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
