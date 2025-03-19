@@ -1,5 +1,5 @@
 "use client";
-import { Box, Heading, SimpleGrid, Button } from "@chakra-ui/react";
+import { Box, Heading, SimpleGrid } from "@chakra-ui/react";
 import { StepCard } from "../StepCard";
 import { BsSearch, BsCartPlus } from "react-icons/bs";
 
@@ -17,7 +17,7 @@ export const HowMembershipWorks: React.FC = () => {
           ))}
         </SimpleGrid>
 
-        <Box textAlign="center" mt={12}>
+        {/* <Box textAlign="center" mt={12}>
           <Button
             as="a"
             colorScheme="yellow"
@@ -31,7 +31,7 @@ export const HowMembershipWorks: React.FC = () => {
           >
             Book Now
           </Button>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );
