@@ -48,5 +48,5 @@ export const Dashboard: React.FC = () => {
 const stats = [
     { label: "Total Patients", value: "3", helpText: "Updated daily" },
     { label: "Mailing List", value: "0", helpText: "For marketing purposes" },
-    { label: "Emails Sent", value: "0", helpText: "This month" },
+    { label: "Inquiries", value: "0", helpText: "contact form entries" },
 ];
