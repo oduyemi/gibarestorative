@@ -1,5 +1,6 @@
 "use client";
-
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Box, ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
 import { usePathname } from "next/navigation"; 
@@ -9,6 +10,7 @@ import "animate.css";
 import { TopHeader } from "@/navigation/TopHeader";
 import { Header } from "@/navigation/Header";
 import { Footer } from "@/navigation/Footer";
+
 
 export default function RootLayout({
   children,
@@ -50,7 +52,17 @@ export default function RootLayout({
 
 const ClientSideLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname(); 
+  const router = useRouter(); 
   const isAdminRoute = pathname?.startsWith("/admin") ?? false; 
+
+  useEffect(() => {
+    if (isAdminRoute) {
+      const token = localStorage.getItem("token");
+      if (!token) {
+        router.push("/admin/login");
+      }
+    }
+  }, [isAdminRoute, router]);
 
   return (
     <>

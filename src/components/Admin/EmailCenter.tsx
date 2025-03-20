@@ -6,8 +6,8 @@ import { jsPDF } from "jspdf";
 import { CSVLink } from "react-csv";
 
 interface MailingList {
+  _id: string;
   email: string;
-  name: string;
 }
 
 export const EmailCenter: React.FC = () => {
@@ -17,7 +17,7 @@ export const EmailCenter: React.FC = () => {
   useEffect(() => {
     const fetchMailingList = async () => {
       try {
-        const response = await fetch("/api/mailing-list"); 
+        const response = await fetch("https://giba.vercel.app/api/v1/mailinglist");  
         const data = await response.json();
         setMailingList(data);
       } catch (error) {
@@ -35,7 +35,7 @@ export const EmailCenter: React.FC = () => {
     const doc = new jsPDF();
     doc.text("Mailing List", 20, 10);
     mailingList.forEach((entry, index) => {
-      doc.text(`${index + 1}. ${entry.name} - ${entry.email}`, 20, 20 + (index * 10));
+      doc.text(`${index + 1}. ${entry._id} - ${entry.email}`, 20, 20 + (index * 10));
     });
     doc.save("mailing_list.pdf");
   };
@@ -67,10 +67,7 @@ export const EmailCenter: React.FC = () => {
 
           <CSVLink
             data={mailingList}
-            headers={[
-              { label: "Name", key: "name" },
-              { label: "Email", key: "email" }
-            ]}
+            headers={[{ label: "Email", key: "email" }]}
             filename="mailing_list.csv"
           >
             <Button
@@ -99,14 +96,12 @@ export const EmailCenter: React.FC = () => {
             <Table variant="simple">
               <Thead>
                 <Tr>
-                  <Th>Name</Th>
                   <Th>Email</Th>
                 </Tr>
               </Thead>
               <Tbody>
                 {mailingList.map((entry, index) => (
                   <Tr key={index}>
-                    <Td>{entry.name}</Td>
                     <Td>{entry.email}</Td>
                   </Tr>
                 ))}

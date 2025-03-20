@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { 
     Box, 
     Grid, 
@@ -13,7 +15,53 @@ import {
 import { Sidebar } from "./Sidebar";
 import { General } from "./General";
 
+// Define expected data types
+interface PatientsData {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+}
+
+interface MailingListData {
+  id: string;
+  email: string;
+}
+
+interface InquiryData {
+  id: string;
+  message: string;
+}
+
 export const Dashboard: React.FC = () => {
+  const [stats, setStats] = useState([
+    { label: "Total Patients", value: 0, helpText: "Updated daily" },
+    { label: "Mailing List", value: 0, helpText: "For marketing purposes" },
+    { label: "Inquiries", value: 0, helpText: "Contact form entries" },
+  ]);
+
+  useEffect(() => {
+    const fetchStats = async () => {
+      try {
+        const [patientsRes, mailingListRes, inquiriesRes] = await Promise.all([
+          axios.get<PatientsData[]>("https://giba.vercel.app/api/v1/patients"),
+          axios.get<MailingListData[]>("https://giba.vercel.app/api/v1/mailinglist"),
+          axios.get<InquiryData[]>("https://giba.vercel.app/api/v1/contact"),
+        ]);
+
+        setStats([
+          { label: "Total Patients", value: patientsRes.data.length ?? 0, helpText: "Updated daily" },
+          { label: "Mailing List", value: mailingListRes.data.length ?? 0, helpText: "For marketing purposes" },
+          { label: "Inquiries", value: inquiriesRes.data.length ?? 0, helpText: "Contact form entries" },
+        ]);
+      } catch (error) {
+        console.error("Error fetching dashboard data:", error);
+      }
+    };
+
+    fetchStats();
+  }, []);
+
   return (
     <Flex>
         <Sidebar />        
@@ -43,10 +91,3 @@ export const Dashboard: React.FC = () => {
     </Flex>
   );
 };
-
-
-const stats = [
-    { label: "Total Patients", value: "3", helpText: "Updated daily" },
-    { label: "Mailing List", value: "0", helpText: "For marketing purposes" },
-    { label: "Inquiries", value: "0", helpText: "contact form entries" },
-];
