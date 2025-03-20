@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { 
     Box, 
@@ -15,7 +15,7 @@ import {
     Icon, 
     Text
 } from "@chakra-ui/react";
-import { FiMenu, FiHome, FiUser, FiSettings, FiMail } from "react-icons/fi";
+import { FiMenu, FiHome, FiUser, FiSettings, FiMail, FiLogOut } from "react-icons/fi";
 
 export const Sidebar: React.FC = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -47,7 +47,7 @@ export const Sidebar: React.FC = () => {
                 <VStack align="stretch" spacing={4}>
                     {menuItems.map((item, index) => (
                         <Link 
-                            key={index}  // Add key prop here
+                            key={index}
                             href={item.link} 
                             display="flex" 
                             alignItems="center" 
@@ -59,6 +59,19 @@ export const Sidebar: React.FC = () => {
                             <Icon as={item.icon} mr={3} /> {item.label}
                         </Link>
                     ))}
+                    {/* Logout Button */}
+                    <Link 
+                        href="/logout" 
+                        display="flex" 
+                        alignItems="center" 
+                        py={2} 
+                        px={3} 
+                        borderRadius="md"
+                        color="red.400"
+                        _hover={{ bg: "red.600", color: "white" }}
+                    >
+                        <Icon as={FiLogOut} mr={3} /> Logout
+                    </Link>
                 </VStack>
             </Box>
 
@@ -71,7 +84,7 @@ export const Sidebar: React.FC = () => {
                         <VStack align="stretch" spacing={4}>
                             {menuItems.map((item, index) => (
                                 <Link 
-                                    key={index}  // Add key prop here
+                                    key={index}
                                     href={item.link} 
                                     onClick={onClose} 
                                     display="flex" 
@@ -84,6 +97,20 @@ export const Sidebar: React.FC = () => {
                                     <Icon as={item.icon} mr={3} /> {item.label}
                                 </Link>
                             ))}
+                            {/* Logout Button */}
+                            <Link 
+                                href="/logout" 
+                                onClick={onClose} 
+                                display="flex" 
+                                alignItems="center" 
+                                py={2} 
+                                px={3} 
+                                borderRadius="md"
+                                color="red.400"
+                                _hover={{ bg: "red.600", color: "white" }}
+                            >
+                                <Icon as={FiLogOut} mr={3} /> Logout
+                            </Link>
                         </VStack>
                     </DrawerBody>
                 </DrawerContent>
@@ -92,7 +119,9 @@ export const Sidebar: React.FC = () => {
     );
 };
 
+// Updated menu items
 const menuItems = [
+    { label: "Home", icon: FiHome, link: "/" },
     { label: "Dashboard", icon: FiHome, link: "/admin" },
     { label: "Patients", icon: FiUser, link: "/admin/patients" },
     { label: "Mailing List", icon: FiMail, link: "/admin/email-center" },

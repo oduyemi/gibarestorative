@@ -4,18 +4,18 @@ import { UserContext } from "@/app/context/UserContext";
 import {
   Box,
   Button,
-  Checkbox,
+  // Checkbox,
   Container,
   Flex,
   FormControl,
   FormLabel,
   Input,
-  Link,
+  // Link,
   VStack,
   Image,
   Card,
   CardBody,
-  HStack,
+  // HStack,
 } from "@chakra-ui/react";
 
 export const LoginForm: React.FC = () => {
@@ -33,14 +33,16 @@ export const LoginForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormSubmitted(true);
-    await handleLogin(formData.email, formData.password);
-    if (flashMessage?.type === "success") {
-      const requestedPath = localStorage.getItem("requestedPath") || "/dashboard";
-      window.location.href = requestedPath;
+  
+    try {
+      await handleLogin(formData.email, formData.password);
+    } finally {
+      setFormSubmitted(false);
     }
   };
   
-
+  
+  
   return (
     <Container maxW="lg" py={10}>
       <Card overflow="hidden" boxShadow="lg" borderRadius="lg">
@@ -49,7 +51,7 @@ export const LoginForm: React.FC = () => {
             {flashMessage.message}
           </Box>
         )}
-        <Flex direction={{ base: "column", md: "row" }} alignItems="center">
+        <Flex direction={{ base: "column", md: "row" }} alignItems="center" justifyContent="center">
           <Box flex={{ base: "none", md: 1 }}>
             <Image
               src="/assets/images/docc.jpg"
@@ -87,10 +89,10 @@ export const LoginForm: React.FC = () => {
                     />
                   </FormControl>
 
-                  <HStack justifyContent="space-between" width="100%">
+                  {/* <HStack justifyContent="space-between" width="100%">
                     <Checkbox>Remember me</Checkbox>
                     <Link color="blue.500" href="#">Forgot password?</Link>
-                  </HStack>
+                  </HStack> */}
 
                   <Button type="submit" colorScheme="yellow" width="full" isLoading={formSubmitted}>
                     Sign in

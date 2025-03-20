@@ -11,6 +11,7 @@ interface LoginResponse {
   lname: string;
   email: string;
   phone: string;
+  jobrole: string;
   token: string;
 }
 
@@ -25,6 +26,7 @@ interface User {
   lname: string;
   email: string;
   phone: string;
+  jobrole: string;
 }
 
 // Define the context type
@@ -53,27 +55,49 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
 
   
   const handleLogin = async (email: string, password: string): Promise<void> => {
-  try {
-    const response = await axios.post<LoginResponse>("https://giba.vercel.app/api/v1/admin/login", { email, password });
-    if (response.status === 200 && response.data.message === "success") {
-      const { adminID, fname, lname, email, phone, token } = response.data;
-      localStorage.setItem("user", JSON.stringify({ adminID, fname, lname, email, phone }));
-      localStorage.setItem("token", token);
-      setUser({ adminID, fname, lname, email, phone });
-
-      setFlashMessage({ type: "success", message: "Login Successful. Welcome Back!" });
-
-      setTimeout(() => router.push("/admin"), 1000);
-    } else {
-      setFlashMessage({ type: "error", message: "Invalid login details. Try again!" });
-    }
-  } catch (error) {
-    console.error("Login Error:", error);
-    setFlashMessage({ type: "error", message: "Login failed. Please try again later." });
-  }
-};
-
-
+    try {
+      console.log("Attempting login with:", { email, password });
+  
+      const response = await axios.post<LoginResponse>(
+        "https://giba.vercel.app/api/v1/admin/login", 
+        { email, password }
+      );
+  
+      console.log("Login response received:", response);
+  
+      if (response.status === 200 && response.data.message === "success") {
+        console.log("Login successful, processing user data...");
+  
+        const { adminID, fname, lname, email, phone, jobrole, token } = response.data;
+  
+        localStorage.setItem("user", JSON.stringify({ adminID, fname, lname, email, phone, jobrole }));
+        localStorage.setItem("token", token);
+        setUser({ adminID, fname, lname, email, phone, jobrole });
+        console.log("User stored in context and localStorage.");
+        setFlashMessage({ type: "success", message: "Login Successful. Welcome Back!" });
+  
+        setTimeout(() => {
+          const requestedPath = localStorage.getItem("requestedPath") || "/admin";
+          console.log("Redirecting to:", requestedPath);
+          router.push(requestedPath);
+        }, 1000);
+      } else {
+        console.warn("Login failed, invalid credentials.");
+        setFlashMessage({ type: "error", message: "Invalid login details. Try again!" });
+      }
+    } catch (error: unknown) {
+      console.error("Login Error:", error);
+    
+      let errorMessage = "Login failed. Please try again later.";
+    
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      }
+    
+      setFlashMessage({ type: "error", message: errorMessage });
+    }    
+  };
+ 
   const handleSignout = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("token");
