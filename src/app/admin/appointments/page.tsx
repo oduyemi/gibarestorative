@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { Appointments } from "@/components/Admin/Appointments";
+import { Appointments } from "@/components/Admin/Inquiries";
 
 
 
