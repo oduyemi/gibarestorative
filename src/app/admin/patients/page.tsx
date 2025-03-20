@@ -3,7 +3,7 @@ import { Box } from "@chakra-ui/react";
 
 
 
-export default function bookings () {
+export default function patients () {
     return(
         <Box>
             <Patients />

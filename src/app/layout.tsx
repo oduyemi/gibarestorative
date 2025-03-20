@@ -50,7 +50,7 @@ export default function RootLayout({
 
 const ClientSideLayout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname(); 
-  const isAdminRoute = pathname?.startsWith("/admin") ?? false; // Handle null case
+  const isAdminRoute = pathname?.startsWith("/admin") ?? false; 
 
   return (
     <>

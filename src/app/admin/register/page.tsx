@@ -3,7 +3,7 @@ import { RegisterForm } from "@/components/Admin/Register";
 
 
 
-export default function bookings () {
+export default function register () {
     return(
         <Box>
             <RegisterForm />

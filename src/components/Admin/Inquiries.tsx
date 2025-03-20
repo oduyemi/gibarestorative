@@ -9,7 +9,6 @@ import {
   Tr,
   Th,
   Td,
-  Input as ChakraInput,
   Select,
   IconButton,
   useToast,
@@ -28,7 +27,7 @@ interface Inquiry {
 
 export const Inquiries: React.FC = () => {
   const [entries, setEntries] = useState<Inquiry[]>([]);
-  const [search, setSearch] = useState("");
+  const [search] = useState("");
   const toast = useToast();
 
   useEffect(() => {
@@ -38,15 +37,16 @@ export const Inquiries: React.FC = () => {
         const data: Inquiry[] = await response.json();
         setEntries(data);
       } catch (error) {
+        console.error("Error fetching inquiries:", error);
         toast({
           title: "Error",
           description: "Failed to fetch inquiries.",
           status: "error",
-          duration: 2000,
+          duration: 3000,
           isClosable: true,
         });
       }
-    };
+    }      
     fetchInquiries();
   }, [toast]);
 

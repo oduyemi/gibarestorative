@@ -3,7 +3,7 @@ import { LoginForm } from "@/components/Admin/Login";
 
 
 
-export default function bookings () {
+export default function login () {
     return(
         <Box>
             <LoginForm />

@@ -3,7 +3,7 @@ import { EmailCenter } from "@/components/Admin/EmailCenter";
 
 
 
-export default function bookings () {
+export default function email () {
     return(
         <Box>
             <EmailCenter />

@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { AdminProfile } from "@/components/Admin/AdminProfile";
 
-export default function Bookings() {
+export default function profile() {
     const dummyData = {
         name: "Jane Doe",
         email: "janedoe@example.com",

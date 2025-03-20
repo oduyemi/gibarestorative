@@ -3,7 +3,7 @@ import { Dashboard } from "@/components/Admin/Dashboard";
 
 
 
-export default function bookings () {
+export default function settings () {
     return(
         <Box>
             <Dashboard />
