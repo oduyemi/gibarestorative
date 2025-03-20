@@ -1,11 +1,33 @@
 "use client";
-import { Box, Text, Heading, Flex, Stack, Button, VStack } from "@chakra-ui/react";
+import { useState, useEffect } from "react";
+import { Box, Text, Heading, Flex, Stack, Button, VStack, Spinner } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 const MotionBox = motion(Box);
 
 export const Intro: React.FC = () => {
+  const [areas, setAreas] = useState<string[]>([]);
+  const [loading] = useState<boolean>(true);
+  const [error] = useState<string | null>(null);
+
+  const fetchAreas = async () => {
+    try {
+      const response = await fetch("https://giba.vercel.app/api/v1/area");
+      if (!response.ok) {
+        throw new Error("Failed to fetch areas");
+      }
+      const data = await response.json();
+      setAreas(data.map((area: { name: string }) => area.name));
+    } catch (error) {
+      console.error("Error fetching service areas:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchAreas();
+  }, []);
+
   return (
     <Box as="section" bg="gray.50" py={{ base: 12, md: 24 }} px={{ base: 6, md: 12 }}>
       <Box maxW="7xl" mx="auto" px={{ base: 6, md: 12 }}>
@@ -55,53 +77,61 @@ export const Intro: React.FC = () => {
                 of mind, body, and spirit. Our integrative approach blends modern medical advancements 
                 with holistic therapies to create lasting vitality.
               </Text>
+
               <Heading as="h3" size="lg" color="teal.600" mb={4}>
-          Service Areas
-        </Heading>
-        <Stack
-          direction={{ base: "column", md: "row" }}
-          spacing={8}
-          align="center"
-          justify="center"
-        >
-          {["Texas", "Vermont", "Arizona", "Delaware"].map((area) => (
-            <motion.div
-              key={area}
-              whileInView={{ opacity: 1, scale: 1 }}
-              initial={{ opacity: 0, scale: 0.9 }}
-              transition={{
-                duration: 0.5,
-                delay: 0.3,
-                type: "spring",
-                stiffness: 100,
-              }}
-              viewport={{ once: true }}
-            >
-              <Box
-                bg="white"
-                px={6}
-                py={4}
-                borderRadius="lg"
-                boxShadow="lg"
-                _hover={{
-                  bg: "teal.50",
-                  boxShadow: "xl",
-                  transform: "scale(1.05)",
-                }}
-                transition="transform 0.3s ease, box-shadow 0.3s ease"
-              >
-                <Text
-                  fontSize="md"
-                  fontWeight="bold"
-                  color="teal.500"
-                  textAlign="center"
+                Service Areas
+              </Heading>
+
+              {loading ? (
+                <Spinner color="teal.500" />
+              ) : error ? (
+                <Text color="red.500">{error}</Text>
+              ) : (
+                <Stack
+                  direction={{ base: "column", md: "row" }}
+                  spacing={8}
+                  align="center"
+                  justify="center"
                 >
-                  {area}
-                </Text>
-              </Box>
-            </motion.div>
-          ))}
-        </Stack>
+                  {areas.map((area) => (
+                    <motion.div
+                      key={area}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.3,
+                        type: "spring",
+                        stiffness: 100,
+                      }}
+                      viewport={{ once: true }}
+                    >
+                      <Box
+                        bg="white"
+                        px={6}
+                        py={4}
+                        borderRadius="lg"
+                        boxShadow="lg"
+                        _hover={{
+                          bg: "teal.50",
+                          boxShadow: "xl",
+                          transform: "scale(1.05)",
+                        }}
+                        transition="transform 0.3s ease, box-shadow 0.3s ease"
+                      >
+                        <Text
+                          fontSize="md"
+                          fontWeight="bold"
+                          color="teal.500"
+                          textAlign="center"
+                        >
+                          {area}
+                        </Text>
+                      </Box>
+                    </motion.div>
+                  ))}
+                </Stack>
+              )}
             </VStack>
 
             {/* Call-to-Action Button */}

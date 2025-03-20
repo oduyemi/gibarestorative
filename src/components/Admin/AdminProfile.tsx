@@ -44,7 +44,6 @@ export const AdminProfile: React.FC = () => {
         setAdmin(response.data.data);
       } catch (error: unknown) {
         console.error("Error fetching admin data:", error);
-      
         if (error instanceof Error) {
           setError(error.message);
         } else {
