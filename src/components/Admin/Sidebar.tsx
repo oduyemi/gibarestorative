@@ -61,7 +61,7 @@ export const Sidebar: React.FC = () => {
                     ))}
                     {/* Logout Button */}
                     <Link 
-                        href="/logout" 
+                        href="/admin/logout" 
                         display="flex" 
                         alignItems="center" 
                         py={2} 
@@ -99,7 +99,7 @@ export const Sidebar: React.FC = () => {
                             ))}
                             {/* Logout Button */}
                             <Link 
-                                href="/logout" 
+                                href="/admin/logout" 
                                 onClick={onClose} 
                                 display="flex" 
                                 alignItems="center" 
