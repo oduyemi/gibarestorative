@@ -101,8 +101,8 @@ export const Footer = () => {
               <Stack spacing={2} fontSize="sm">
                 <Link href="/weight-loss" _hover={{ textDecoration: "underline", color: "yellow.500" }}>Weight Loss Program</Link>
                 <Link href="/hormone-replacement" _hover={{ textDecoration: "underline", color: "yellow.500" }}>Hormone Replacement</Link>
-                <Link href="/virtual-visits" _hover={{ textDecoration: "underline", color: "yellow.500" }}>Virtual Visits</Link>
-                <Link href="/patient-care" _hover={{ textDecoration: "underline", color: "yellow.500" }}>Direct Patient Care</Link>
+                <Link href="/virtual-care" _hover={{ textDecoration: "underline", color: "yellow.500" }}>Virtual Visits</Link>
+                <Link href="/care" _hover={{ textDecoration: "underline", color: "yellow.500" }}>Direct Patient Care</Link>
               </Stack>
             </Box>
 
@@ -114,7 +114,7 @@ export const Footer = () => {
                 <Link href="/about" _hover={{ textDecoration: "underline", color: "yellow.500" }}>About</Link>
                 <Link href="/contact" _hover={{ textDecoration: "underline", color: "yellow.500" }}>Contact</Link>
                 <Link href="/membership" _hover={{ textDecoration: "underline", color: "yellow.500" }}>Members</Link>
-                <Link href="/urgent-care" _hover={{ textDecoration: "underline", color: "yellow.500" }}>Urgent Care</Link>
+                <Link href="/bookings" _hover={{ textDecoration: "underline", color: "yellow.500" }}>Bookings</Link>
               </Stack>
             </Box>
           </Flex>
