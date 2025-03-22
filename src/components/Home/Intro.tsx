@@ -8,26 +8,33 @@ const MotionBox = motion(Box);
 
 export const Intro: React.FC = () => {
   const [areas, setAreas] = useState<string[]>([]);
-  const [loading] = useState<boolean>(true);
-  const [error] = useState<string | null>(null);
-
-  const fetchAreas = async () => {
-    try {
-      const response = await fetch("https://giba.vercel.app/api/v1/area");
-      if (!response.ok) {
-        throw new Error("Failed to fetch areas");
-      }
-      const data = await response.json();
-      setAreas(data.map((area: { name: string }) => area.name));
-    } catch (error) {
-      console.error("Error fetching service areas:", error);
-    }
-  };
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    const fetchAreas = async () => {
+      try {
+        const response = await fetch("https://giba.vercel.app/api/v1/area");
+        if (!response.ok) {
+          throw new Error("Failed to fetch areas");
+        }
+        const data = await response.json();
+        setAreas(data.map((area: { name: string }) => area.name));
+        setError(null);
+      } catch (error: unknown) {
+        if (error instanceof Error) {
+          setError(error.message);
+        } else {
+          setError("An unknown error occurred.");
+        }
+      } finally {
+        setLoading(false); // ✅ Now using setLoading to update state
+      }
+    };
+  
     fetchAreas();
   }, []);
-
+  
   return (
     <Box as="section" bg="gray.50" py={{ base: 12, md: 24 }} px={{ base: 6, md: 12 }}>
       <Box maxW="7xl" mx="auto" px={{ base: 6, md: 12 }}>
