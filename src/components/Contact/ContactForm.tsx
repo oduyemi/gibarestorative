@@ -116,96 +116,87 @@ export const ContactForm = () => {
   return (
     <section className="ftco-section bg-light mt-5">
       <Center>
-        <Box className="container" maxW="1200px">
-          <Box className="row justify-content-center">
-            <Box className="col-md-12">
-              <Box className="wrapper">
-                <Box className="row no-gutters">
-                  <Box className="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
-                    <Box className="contact-wrap w-100 p-md-5 p-4" bg="white" boxShadow="lg" borderRadius="md">
-                      <Heading as="h3" mb={4} color="#008B8B">
-                        Get in touch
-                      </Heading>
-                      <form onSubmit={handleSubmit}>
-                        <Stack spacing={4}>
-                          <FormControl id="name" isInvalid={!!errors.name}>
-                            <FormLabel>Full Name</FormLabel>
-                            <Input
-                              type="text"
-                              name="name"
-                              value={formData.name}
-                              onChange={handleChange}
-                              placeholder="Name"
-                              borderColor={errors.name ? "red.500" : "gray.300"}
-                              _focus={{ borderColor: "teal.500" }}
-                            />
-                            {errors.name && <FormErrorMessage>{errors.name}</FormErrorMessage>}
-                          </FormControl>
-                          <FormControl id="email" isInvalid={!!errors.email}>
-                            <FormLabel>Email Address</FormLabel>
-                            <Input
-                              type="email"
-                              name="email"
-                              value={formData.email}
-                              onChange={handleChange}
-                              placeholder="Email"
-                              borderColor={errors.email ? "red.500" : "gray.300"}
-                              _focus={{ borderColor: "teal.500" }}
-                            />
-                            {errors.email && <FormErrorMessage>{errors.email}</FormErrorMessage>}
-                          </FormControl>
-                          <FormControl id="phone" isInvalid={!!errors.phone}>
-                            <FormLabel>Phone Number</FormLabel>
-                            <Input
-                              type="number"
-                              name="phone"
-                              value={formData.phone}
-                              onChange={handleChange}
-                              placeholder="Phone number"
-                              borderColor={errors.phone ? "red.500" : "gray.300"}
-                              _focus={{ borderColor: "teal.500" }}
-                            />
-                            {errors.phone && <FormErrorMessage>{errors.phone}</FormErrorMessage>}
-                          </FormControl>
-                          <FormControl id="subject" isInvalid={!!errors.subject}>
-                            <FormLabel>Subject</FormLabel>
-                            <Input
-                              type="text"
-                              name="subject"
-                              value={formData.subject}
-                              onChange={handleChange}
-                              placeholder="Subject"
-                              borderColor={errors.subject ? "red.500" : "gray.300"}
-                              _focus={{ borderColor: "teal.500" }}
-                            />
-                            {errors.subject && <FormErrorMessage>{errors.subject}</FormErrorMessage>}
-                          </FormControl>
-                          <FormControl id="message" isInvalid={!!errors.message}>
-                            <FormLabel>Message</FormLabel>
-                            <Textarea
-                              name="message"
-                              value={formData.message}
-                              onChange={handleChange}
-                              placeholder="Message"
-                              rows={4}
-                              borderColor={errors.message ? "red.500" : "gray.300"}
-                              _focus={{ borderColor: "teal.500" }}
-                            />
-                            {errors.message && <FormErrorMessage>{errors.message}</FormErrorMessage>}
-                          </FormControl>
-                          <Button type="submit" colorScheme="yellow" isLoading={isLoading} loadingText="Sending...">
-                            Send Message
-                          </Button>
-                        </Stack>
-                      </form>
-                    </Box>
-                  </Box>
+        <Box maxW="600px" w="100%" mx="auto">
+          <Box bg="white" p={6} boxShadow="lg" borderRadius="md">
+            <Heading as="h3" mb={4} color="#008B8B">
+              Get in touch
+            </Heading>
+            <form onSubmit={handleSubmit}>
+              <Stack spacing={4}>
+                      <FormControl id="name" isInvalid={!!errors.name}>
+                        <FormLabel>Full Name</FormLabel>
+                        <Input
+                          type="text"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          placeholder="Name"
+                          borderColor={errors.name ? "red.500" : "gray.300"}
+                          _focus={{ borderColor: "teal.500" }}
+                        />
+                        {errors.name && <FormErrorMessage>{errors.name}</FormErrorMessage>}
+                      </FormControl>
+                      <FormControl id="email" isInvalid={!!errors.email}>
+                        <FormLabel>Email Address</FormLabel>
+                        <Input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          placeholder="Email"
+                          borderColor={errors.email ? "red.500" : "gray.300"}
+                          _focus={{ borderColor: "teal.500" }}
+                        />
+                        {errors.email && <FormErrorMessage>{errors.email}</FormErrorMessage>}
+                      </FormControl>
+                      <FormControl id="phone" isInvalid={!!errors.phone}>
+                        <FormLabel>Phone Number</FormLabel>
+                        <Input
+                          type="number"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          placeholder="Phone number"
+                          borderColor={errors.phone ? "red.500" : "gray.300"}
+                          _focus={{ borderColor: "teal.500" }}
+                        />
+                        {errors.phone && <FormErrorMessage>{errors.phone}</FormErrorMessage>}
+                      </FormControl>
+                      <FormControl id="subject" isInvalid={!!errors.subject}>
+                        <FormLabel>Subject</FormLabel>
+                        <Input
+                          type="text"
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleChange}
+                          placeholder="Subject"
+                          borderColor={errors.subject ? "red.500" : "gray.300"}
+                          _focus={{ borderColor: "teal.500" }}
+                        />
+                        {errors.subject && <FormErrorMessage>{errors.subject}</FormErrorMessage>}
+                      </FormControl>
+                      <FormControl id="message" isInvalid={!!errors.message}>
+                        <FormLabel>Message</FormLabel>
+                        <Textarea
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          placeholder="Message"
+                          rows={4}
+                          borderColor={errors.message ? "red.500" : "gray.300"}
+                          _focus={{ borderColor: "teal.500" }}
+                        />
+                        {errors.message && <FormErrorMessage>{errors.message}</FormErrorMessage>}
+                      </FormControl>
+                      <Button type="submit" colorScheme="yellow" isLoading={isLoading} loadingText="Sending...">
+                        Send Message
+                      </Button>
+                    </Stack>
+                  </form>
                 </Box>
               </Box>
-            </Box>
-          </Box>
-        </Box>
-      </Center>
+            </Center>
+       
     </section>
   );
 };
