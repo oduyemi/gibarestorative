@@ -4,7 +4,6 @@ import {
   Container,
   Heading,
   Text,
-  Link,
   UnorderedList,
   ListItem,
   VStack,
@@ -23,155 +22,198 @@ export const PrivacyPolicy: React.FC = () => {
         </Text>
 
         <Text fontSize="lg">
-          This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
+          This Privacy Policy describes Our policies and 
+          procedures on the collection, use and disclosure 
+          of Your information when You use the Service and 
+          tells You about Your privacy rights and how 
+          the law protects You.
         </Text>
 
         <Text fontSize="lg">
-          We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. 
+          We use Your Personal data to provide and improve 
+          the Service. By using the Service, You agree to 
+          the collection and use of information in 
+          accordance with this Privacy Policy. 
         </Text>
 
         <Box mt={8}>
           <Heading as="h2" size="xl" fontWeight="semibold" color="teal.600" mb={4}>
-            Interpretation and Definitions
+            Our Legal Responsibilties
           </Heading>
 
-          <Heading as="h3" size="lg" color="gray.600" fontWeight="semibold" mb={2}>
+          {/* <Heading as="h3" size="lg" color="gray.600" fontWeight="semibold" mb={2}>
             Interpretation
-          </Heading>
+          </Heading> */}
           <Text fontSize="lg" mb={4}>
-            The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+            We are required by law to give you this notice. It provides you with
+            information about how we may use and disclose protected health
+            information about you and describes your rights and our obligations
+            regarding the use and disclosure of that information. We shall maintain the
+            privacy of protected health information and provide you with notice of our
+            legal duties and privacy practices with respect to your protected health
+            information.<br/><br/>
+            We are committed to protecting your privacy and developing technology that
+            gives you the most powerful and safe online experience.
+            By using this website, you consent to the data practices described in this
+            statement.
           </Text>
 
           <Heading as="h3" size="lg" fontWeight="semibold" color="gray.600" mb={2}>
-            Definitions
+            Collection of Information
           </Heading>
-          <Text fontSize="lg" mb={4}>For the purposes of this Privacy Policy:</Text>
+          <Text fontSize="lg" mb={4}>
+            This Practice collects various types of information from you, including but not
+            limited to:
+          </Text>
           <UnorderedList spacing={2} pl={6}>
             <ListItem>
-              <strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.
+              <strong>Personal Information: </strong> 
+              Personal Information: this practice collects Name, email address, phone
+              number, mailing address, date of birth, and any other information you provide
+              directly to us. This Practice also collects anonymous demographic
+              information, which is not unique to you, such as your ZIP code, age, gender,
+              preferences, interests and favorites.
+              This Practice collects your personal information to operate the Web site and
+              deliver the services you have requested.
             </ListItem>
             <ListItem>
-              <strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where &apos;control&apos; means ownership of 50% or more of the shares, equity interest, or other securities entitled to vote for election of directors or other managing authority.
+              <strong>Health Information: </strong> 
+              this practice collects information related to your medical
+              history, treatment plans, and other health-related data provided to us
+              through our online forms or during consultations.
             </ListItem>
             <ListItem>
-              <strong>Company</strong> (referred to as either &apos;the Company&apos;, &apos;We&apos;, &apos;Us&apos; or &apos;Our&apos; in this Agreement) refers to GIBA Medical Clinic, 4201 Cypress creek Pkwy Ste 540 Houston, Texas 77068.
+              <strong>Technical Information: </strong> 
+              information about your computer hardware and
+              software is automatically collected by this website. This information can
+              include: your IP address, browser type, domain names, access times and
+              referring Web site addresses. This information is used for the operation of the
+              service, to maintain quality of the service, and to provide general statistics
+              regarding use of this Web site.
             </ListItem>
             <ListItem>
-              <strong>Cookies</strong> are small files that are placed on Your computer, mobile device, or any other device by a website, containing the details of Your browsing history on that website among its many uses.
-            </ListItem>
-            <ListItem>
-              <strong>Country</strong> refers to: Texas, United States
-            </ListItem>
-            <ListItem>
-              <strong>Device</strong> means any device that can access the Service such as a computer, a cellphone, or a digital tablet.
-            </ListItem>
-            <ListItem>
-              <strong>Personal Data</strong> is any information that relates to an identified or identifiable individual.
-            </ListItem>
-            <ListItem>
-              <strong>Service</strong> refers to the Website.
-            </ListItem>
-            <ListItem>
-              <strong>Service Provider</strong> means any natural or legal person who processes the data on behalf of the Company.
-            </ListItem>
-            <ListItem>
-              <strong>Usage Data</strong> refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself.
-            </ListItem>
-            <ListItem>
-              <strong>Website</strong> refers to Giba Medical Clinic, accessible from{" "}
-              <Link href="https://gibarestorative.com/" isExternal color="teal.500">
-                https://gibarestorative.com/
-              </Link>
-            </ListItem>
-            <ListItem>
-              <strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+              <strong>Payment Information: </strong> 
+              Credit card details, billing address, and other payment-
+              related information for processing transactions.
             </ListItem>
           </UnorderedList>
         </Box>
 
         <Box mt={8}>
           <Heading as="h2" size="xl" fontWeight="semibold" color="teal.600" mb={4}>
-            Collecting and Using Your Personal Data
-          </Heading>
-
-          <Heading as="h3" size="lg" fontWeight="semibold" color="gray.600" mb={2}>
-            Types of Data Collected
-          </Heading>
-
-          <Heading as="h4" size="md" color="teal.800" fontWeight="semibold" mb={2}>
-            Personal Data
+            Use of Information
           </Heading>
           <Text fontSize="lg" mb={4}>
-            While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
+            This Practice uses your personal information to operate the Web site and
+            deliver the services you have requested.
+            Your personal information is used to inform you of other products or services
+            available from this Practice and its affiliates.
+            This Practice may also contact you through surveys to conduct research
+            about your opinion of current services or of potential new services that may
+            be offered.<br/><br/>
+            Important updates, newsletters, appointment reminders, and other
+            communications related to your care are sent to you through your personal
+            information collected.
+            This practice uses your information to improve user experience on our
+            website and improve our services based on your feedback and interaction
+            with our site.
           </Text>
-          <UnorderedList spacing={2} pl={6}>
-            <ListItem>Email address</ListItem>
-            <ListItem>First name and last name</ListItem>
-            <ListItem>Phone number</ListItem>
-            <ListItem>Address, State, Province, ZIP/Postal code, City</ListItem>
-            <ListItem>Usage Data</ListItem>
-          </UnorderedList>
-
           <Heading as="h4" size="md" fontWeight="semibold" color="teal.800" mb={2}>
-            Usage Data
+            Share of Information
           </Heading>
           <Text fontSize="lg" mb={4}>
-            Usage Data is collected automatically when using the Service. It may include information such as Your Device&apos;s Internet Protocol address (IP address), browser type, browser version, the pages of our Service that You visit, and other diagnostic data.
-          </Text>
-
-          <Heading as="h4" size="md" fontWeight="semibold" color="teal.800" mb={2}>
-            Tracking Technologies and Cookies
-          </Heading>
-          <Text fontSize="lg" mb={4}>
-            We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:
+            This practice does not sell, trade, or otherwise transfer your personal
+            information to outside parties except in the following circumstances:
           </Text>
           <UnorderedList spacing={2} pl={6}>
             <ListItem>
-              <strong>Cookies or Browser Cookies:</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service.
+              <strong>Service Providers: </strong> 
+              We may share your information with trusted third-party
+              service providers who assist us in operating our website, conducting our
+              business, perform statistical analysis, send you email or postal mail, provide
+              customer support, or arrange for deliveries. All such third parties are
+              prohibited from using your personal information except to provide these
+              services and they are required to maintain the confidentiality of your
+              information.
             </ListItem>
             <ListItem>
-              <strong>Web Beacons:</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company to count users who have visited those pages or opened an email.
+              <strong>Legal Requirements:</strong> 
+              We may disclose your information if required by law or in
+              response to a valid court order, subpoena, or government request.
+              This Practice does not use or disclose sensitive personal information, such as
+              race, religion, or political affiliations, without your explicit consent.
+            </ListItem>
+            <ListItem>
+              <strong>Business Transfers: </strong> 
+              In the event of a merger, acquisition, or sale of all or a
+              portion of our assets, your information may be transferred to the new owners.
             </ListItem>
           </UnorderedList>
-          <Text fontSize="lg" mb={4}>
-            Cookies can be &apos;Persistent&apos; or &apos;Session&apos; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser.
-          </Text>
         </Box>
 
         <Box mt={8}>
           <Heading as="h3" size="lg" fontWeight="semibold" mb={4} color="teal.600">
-            Use of Your Personal Data
+            Data Security
           </Heading>
+          <Text fontSize="lg" mb={4}>
+            TA variety of security measures are implemented to maintain the safety of
+            your personal information. These include secure access control, encryption,
+            and regular security assessments. However, please be aware that no method
+            of transmission over the internet or electronic storage is 100% secure, and we
+            cannot guarantee absolute security.
+          </Text>
+          <Heading as="h3" size="lg" fontWeight="semibold" mb={4} color="teal.600">
+            Cookies &amp; Tracking Technology
+          </Heading>
+          <Text fontSize="lg" mb={4}>
+            The Web site uses “cookies” to help this Practice personalize your online
+            experience. A cookie is a text file that is placed on your hard disk by a Web
+            page server. Cookies cannot be used to run programs or deliver viruses to
+            your computer. Cookies are uniquely assigned to you and can only be read
+            by a web server in the domain that issued the cookie to you.
+          </Text>
+          <Heading as="h3" size="lg" fontWeight="semibold" mb={4} color="teal.600">
+            Your Rights
+          </Heading>
+          <Text fontSize="lg" mb={4}>
+            You have the right to access, update, or delete your personal information at
+            any time. You may also request to limit the processing of your data or opt-out
+            of certain communications. To exercise any of these rights, please contact us
+            using the information provided below.
+          </Text>
           <UnorderedList spacing={2} pl={6}>
-            <ListItem>To provide and maintain our Service</ListItem>
-            <ListItem>To manage Your Account</ListItem>
-            <ListItem>For the performance of a contract</ListItem>
-            <ListItem>To contact You</ListItem>
-            <ListItem>To provide You with news, special offers, and general information about other goods and services</ListItem>
-            <ListItem>To manage Your requests</ListItem>
-            <ListItem>For business transfers</ListItem>
-            <ListItem>For other purposes such as data analysis and improving the Service</ListItem>
+            <ListItem>
+              <strong>THIRD PARTY LINKS: </strong>
+              Our website may contain links to third-party websites. We are not responsible
+              for the privacy practices or the content of these external sites. We encourage
+              you to review the privacy policies of any third-party sites you visit.
+            </ListItem>
           </UnorderedList>
         </Box>
 
         <Box mt={8}>
           <Heading as="h3" size="lg" fontWeight="semibold" mb={4} color="teal.600">
-            Retention of Your Personal Data
+            Changes to This Privacy Policy
           </Heading>
           <Text fontSize="lg" mb={4}>
-            The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy.
+            This Practice will occasionally update or modify this privacy policy to reflect
+            company and customer feedback. We encourage you to periodically review
+            this Statement to be informed of how this Practice is protecting your
+            information.
           </Text>
         </Box>
 
         <Box mt={8}>
           <Heading as="h3" size="lg" fontWeight="semibold" mb={4} color="teal.600">
-            Transfer of Your Personal Data
+            Contact Information
           </Heading>
           <Text fontSize="lg" mb={4}>
-            Your information, including Personal Data, is processed at the Company&apos;s operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction.
-          </Text>
-          <Text fontSize="lg" mb={4}>
-            Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.
+            If you have any questions or concerns about this Privacy Policy or our privacy
+            practices, please contact us at:<br/>
+            By Phone: 346-545-1355<br/>
+            By email: info@gibarestorative.com<br/>
+            By address: 5900 Balcones Drive STE 100<br/>
+            Austin, TX 78731
           </Text>
         </Box>
       </VStack>
