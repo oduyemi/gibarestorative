@@ -127,7 +127,7 @@ export const Footer = () => {
               &copy; {new Date().getFullYear()} Giba Medical Clinic | All rights reserved
             </Text>
             <Stack direction="row" spacing={6} fontSize="sm">
-              <Link href="" color="teal.500" _hover={{ textDecoration: "underline", color: "teal.600" }}>Terms</Link>
+              <Link href="/terms" color="teal.500" _hover={{ textDecoration: "underline", color: "teal.600" }}>Terms</Link>
               <Link href="/privacy-policy" color="teal.500" _hover={{ textDecoration: "underline", color: "teal.600" }}>Privacy</Link>
             </Stack>
           </Flex>
